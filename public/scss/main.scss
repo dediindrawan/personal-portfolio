@@ -17,15 +17,17 @@
     right: 0;
     left: 0;
     z-index: 10;
-    &::after {
-      content: '';
-      display: block;
-      width: $full;
-      height: $y-screen;
-      position: fixed;
-      z-index: -1;
-      left: -100%;
-      background: rgba($color: $dark, $alpha: 0.7);
+    &.show-overlay {
+      &::after {
+        content: '';
+        display: block;
+        width: $full;
+        height: $full;
+        background: rgba($color: $dark, $alpha: 0.7);
+        position: fixed;
+        top: 70px;
+        z-index: -1;
+      }
     }
     // ========== breakpoint max width on 575px ========== //
     @include breakpoint-screen-mobile {

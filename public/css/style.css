@@ -4,24 +4,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar-overlay {
-  width: 100% !important;
-  max-height: 100% !important;
-  position: fixed;
-  background: rgba(15, 14, 15, 0.7);
-}
-
-.show-overlay::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-  left: 0;
-  background: rgba(15, 14, 15, 0.4);
-}
-
 .sticky-navbar {
   background: #1b191b;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
@@ -152,15 +134,15 @@ body {
   left: 0;
   z-index: 10;
 }
-.container .wrapper-navbar::after {
+.container .wrapper-navbar.show-overlay::after {
   content: "";
   display: block;
   width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-  left: -100%;
+  height: 100%;
   background: rgba(15, 14, 15, 0.7);
+  position: fixed;
+  top: 70px;
+  z-index: -1;
 }
 @media screen and (max-width: 575px) {
   .container .wrapper-navbar {

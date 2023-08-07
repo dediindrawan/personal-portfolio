@@ -1,6 +1,6 @@
 // change image on user platform using basically
 function setSharedImage() {
-    var sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
+    let sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
 
     // set user popular platform are needed
     if (window.location.href.includes('whatsapp.com')) {
@@ -27,7 +27,6 @@ function navbar() {
     toggleMenu.addEventListener('click', () => {
         navLinkMenu.classList.toggle('nav-open');
         wrapperNavbar.classList.toggle('show-overlay');
-        // wrapperNavbar.classList.toggle('navbar-overlay');
 
         if (navLinkMenu.classList.contains('nav-open')) {
             document.querySelector('.btn-toggle-open').style.display = 'none';
@@ -38,21 +37,23 @@ function navbar() {
         };
     });
 
+    // click everywhere on window to close nav link
     document.addEventListener('click', (e) => {
         if (!toggleMenu.contains(e.target) && !navLinkMenu.contains(e.target)) {
             navLinkMenu.classList.remove('nav-open');
-            // wrapperNavbar.classList.remove('navbar-overlay');
+            wrapperNavbar.classList.remove('show-overlay');
             document.querySelector('.btn-toggle-open').style.display = 'block';
             document.querySelector('.btn-toggle-close').style.display = 'none';
         };
     });
 
+    // adding new class when window on horizontal scrolling
     window.addEventListener('scroll', () => {
         wrapperNavbar.classList.toggle('sticky-navbar', scrollY > 70);
         wrapperNavbar.style.transition = 'all 0.3s ease-in-out';
-        // if (window.innerWidth < 320) {
-        //     wrapperNavbar.classList.remove('sticky-navbar');
-        // };
+        if (window.innerWidth < 1024) {
+            wrapperNavbar.classList.remove('sticky-navbar');
+        };
     });
 };
 navbar();

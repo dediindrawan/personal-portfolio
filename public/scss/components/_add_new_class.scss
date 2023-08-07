@@ -7,26 +7,6 @@
   transition: transform abstract.$transition;
 }
 
-.navbar-overlay {
-  width: 100% !important;
-  max-height: 100% !important;
-  position: fixed;
-  background: rgba($color: color.$dark, $alpha: 0.7);
-}
-
-.show-overlay {
-  &::after {
-    content: '';
-      display: block;
-      width: layout.$full;
-      height: layout.$y-screen;
-      position: fixed;
-      z-index: -1;
-      left: 0;
-      background: rgba($color: color.$dark, $alpha: 0.4);
-  }
-}
-
 .sticky-navbar {
   background: color.$primary;
   box-shadow: 0 0 1px rgba($color: color.$default, $alpha: 0.3);
