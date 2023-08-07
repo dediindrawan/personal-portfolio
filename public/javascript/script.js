@@ -1,17 +1,17 @@
 // Fungsi untuk mengubah gambar berdasarkan platform yang digunakan pengguna
 function setSharedImage() {
-    var sharedImage = 'URL_gambar_logo_atau_icon'; // URL gambar logo atau icon website Anda
+    var sharedImage = 'https://i.postimg.cc/nhDCrpW2/Pics-Art-08-07-05-12-40.png'; // URL gambar logo atau icon website Anda
 
     // Di bawah ini adalah contoh penyesuaian gambar untuk Twitter
-    if (window.location.href.includes('twitter.com')) {
-        sharedImage = 'URL_gambar_lain_untuk_Twitter';
-    }
+    if (window.location.href.includes('https://dediindrawan.github.io/personal-portfolio/')) {
+        sharedImage = 'https://i.postimg.cc/nhDCrpW2/Pics-Art-08-07-05-12-40.png';
+    };
 
     // Di bawah ini adalah contoh penyesuaian gambar untuk platform lain (tambahkan jika perlu)
 
     // Set gambar yang akan ditampilkan ketika link website dibagikan
     document.querySelector('meta[property="og:image"]').setAttribute('content', sharedImage);
-}
+};
 
 // Panggil fungsi setSharedImage saat halaman dimuat
 setSharedImage();
@@ -53,3 +53,7 @@ function navbar() {
     });
 };
 navbar();
+
+function btnHero() {
+    window.location.href = "./pages/contact.html";
+};
