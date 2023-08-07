@@ -55,5 +55,5 @@ function navbar() {
 navbar();
 
 function btnHero() {
-    window.location.href = "https://dediindrawan.github.io/personal-portfolio/pages/contact.html";
+    window.location.href = "pages/contact.html";
 };
