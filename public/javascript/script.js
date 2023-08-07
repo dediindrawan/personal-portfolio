@@ -1,10 +1,15 @@
 // Fungsi untuk mengubah gambar berdasarkan platform yang digunakan pengguna
 function setSharedImage() {
-    var sharedImage = 'https://i.postimg.cc/nhDCrpW2/Pics-Art-08-07-05-12-40.png'; // URL gambar logo atau icon website Anda
+    var sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png'; // URL gambar logo atau icon website Anda
 
-    // Di bawah ini adalah contoh penyesuaian gambar untuk Twitter
-    if (window.location.href.includes('https://dediindrawan.github.io/personal-portfolio/')) {
-        sharedImage = 'https://i.postimg.cc/nhDCrpW2/Pics-Art-08-07-05-12-40.png';
+    if (window.location.href.includes('whatsapp.com')) {
+        sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
+    } else if (window.location.href.includes('instagram.com')) {
+        sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
+    } else if (window.location.href.includes('telegram.com')) {
+        sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
+    } else if (window.location.href.includes('twitter.com')) {
+        sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
     };
 
     // Di bawah ini adalah contoh penyesuaian gambar untuk platform lain (tambahkan jika perlu)
@@ -24,6 +29,7 @@ function navbar() {
 
     toggleMenu.addEventListener('click', () => {
         navLinkMenu.classList.toggle('nav-open');
+        wrapperNavbar.classList.toggle('show-overlay');
         // wrapperNavbar.classList.toggle('navbar-overlay');
 
         if (navLinkMenu.classList.contains('nav-open')) {

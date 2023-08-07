@@ -17,6 +17,16 @@
     right: 0;
     left: 0;
     z-index: 10;
+    &::after {
+      content: '';
+      display: block;
+      width: $full;
+      height: $y-screen;
+      position: fixed;
+      z-index: -1;
+      left: -100%;
+      background: rgba($color: $dark, $alpha: 0.7);
+    }
     // ========== breakpoint max width on 575px ========== //
     @include breakpoint-screen-mobile {
       padding: 0;
@@ -1129,6 +1139,7 @@
         li {
           width: 31.5%;
           height: auto;
+          border-radius: $rd-10;
           overflow: hidden;
           position: relative;
           // ========== breakpoint max width on 575px ========== //
@@ -1169,6 +1180,7 @@
               display: flex;
               justify-content: space-between;
               flex-direction: column;
+              border-radius: $rd-10;
               position: absolute;
               top: 0;
               right: 0;
@@ -1247,6 +1259,7 @@
       // ========== card ========== //
       .card {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: $gap-2;
         li {
