@@ -1,7 +1,8 @@
-// Fungsi untuk mengubah gambar berdasarkan platform yang digunakan pengguna
+// change image on user platform using basically
 function setSharedImage() {
-    var sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png'; // URL gambar logo atau icon website Anda
+    var sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
 
+    // set user popular platform are needed
     if (window.location.href.includes('whatsapp.com')) {
         sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
     } else if (window.location.href.includes('instagram.com')) {
@@ -12,16 +13,12 @@ function setSharedImage() {
         sharedImage = 'https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png';
     };
 
-    // Di bawah ini adalah contoh penyesuaian gambar untuk platform lain (tambahkan jika perlu)
-
-    // Set gambar yang akan ditampilkan ketika link website dibagikan
+    // set display picture when link is shared by user
     document.querySelector('meta[property="og:image"]').setAttribute('content', sharedImage);
 };
-
-// Panggil fungsi setSharedImage saat halaman dimuat
 setSharedImage();
 
-
+// styling to navbar interaction
 function navbar() {
     const wrapperNavbar = document.querySelector('.wrapper-navbar');
     const toggleMenu = document.querySelector('.toggle-menu');
@@ -60,6 +57,7 @@ function navbar() {
 };
 navbar();
 
+// direct button on click to contact page
 function btnHero() {
     window.location.href = "pages/contact.html";
 };
