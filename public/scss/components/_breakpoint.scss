@@ -1,0 +1,70 @@
+// // 640px, 1150px, 1400px
+// $breakpoints-up: (
+//   'medium': '40em',
+//   'large': '71.875em',
+//   'xlarge': '87.5em',
+// );
+
+// // 639px, 1149px, 1399px
+// $breakpoints-down: (
+//   'medium': '39.9375em',
+//   'large': '71.8125em',
+//   'xlarge': '87.4375em',
+// );
+
+// @mixin breakpoint-up($size) {
+//   @media screen and (min-width: map-get($breakpoints-up, $size)) {
+//     @content;
+//   }
+// }
+
+// @mixin breakpoint-down($size) {
+//   @media screen and (max-width: map-get($breakpoints-down, $size)) {
+//     @content;
+//   }
+// }
+
+$device-breakpoint: (
+  mobile: '(max-width: 575px)',
+  tablet: '(min-width: 576px) and (max-width: 767px)',
+  mobile-tablet-landscape: '(min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape)',
+  small-desktop: '(min-width: 768px) and (max-width: 767px)',
+  medium-desktop: '(min-width: 71.875em) and (max-width: 87.4375em)',
+  large-desktop: '(min-width: 87.5em)',
+);
+
+@mixin breakpoint-screen-mobile {
+  @media screen and #{map-get($device-breakpoint, mobile)} {
+    @content;
+  }
+}
+
+@mixin breakpoint-screen-tablet {
+  @media screen and #{map-get($device-breakpoint, tablet)} {
+    @content;
+  }
+}
+
+@mixin breakpoint-screen-mobile-tablet-landscape {
+  @media screen and #{map-get($device-breakpoint, mobile-tablet-landscape)} {
+    @content;
+  }
+}
+
+@mixin breakpoint-screen-small-desktop {
+  @media screen and #{map-get($device-breakpoint, small-desktop)} {
+    @content;
+  }
+}
+
+@mixin breakpoint-screen-medium-desktop {
+  @media screen and #{map-get($device-breakpoint, medium-desktop)} {
+    @content;
+  }
+}
+
+@mixin breakpoint-screen-large-desktop {
+  @media screen and #{map-get($device-breakpoint, large-desktop)} {
+    @content;
+  }
+}

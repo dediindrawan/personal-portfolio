@@ -1,0 +1,31 @@
+// typography
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// font family
+$ft-primary: 'Poppins', sans-serif;
+
+// font weight
+$ft-thin: 100;
+$ft-x-light: 200;
+$ft-light: 300;
+$ft-regular: 400;
+$ft-medium: 500;
+$ft-s-bold: 600;
+$ft-bold: 700;
+$ft-x-bold: 800;
+$ft-black: 900;
+
+// heading font size
+$ft-h1: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+$ft-h2: clamp(1.5rem, 4vw + 1rem, 2.25rem);
+$ft-h3: clamp(1.17rem, 4vw + 1rem, 1.5rem);
+$ft-h4: clamp(1rem, 4vw - 1rem, 1.17rem);
+$ft-h5: clamp(0.83rem, 4vw - 1rem, 1rem);
+$ft-h6: clamp(0.67rem, 4vw - 1rem, 0.83rem);
+
+// paragraph font size
+$ft-p: clamp(1rem, 4vw - 1rem, 1rem);
+$ft-p-special: clamp(1.5rem, 4vw - 1rem, 1.75rem);
+
+// small font size
+$ft-small: 0.75rem;

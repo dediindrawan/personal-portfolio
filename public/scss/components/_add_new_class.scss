@@ -1,0 +1,20 @@
+@use '../global/layout' as layout;
+@use '../global/color' as color;
+@use '../components/abstract' as abstract;
+
+.nav-open {
+  transform: translateX(0) !important;
+  transition: transform abstract.$transition;
+}
+
+.navbar-overlay {
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  background: rgba($color: #0a0501, $alpha: 0.7);
+}
+
+.sticky-navbar {
+  background: color.$primary;
+  box-shadow: 0 0 1px rgba($color: color.$default, $alpha: 0.3);
+}

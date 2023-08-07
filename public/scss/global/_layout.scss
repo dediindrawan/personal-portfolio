@@ -1,0 +1,89 @@
+@use './color' as color;
+
+// width & high
+$full: 100%;
+$half: 50%;
+$x-screen: 100vw;
+$y-screen: 100vh;
+
+// margin
+$mt-1: 1em;
+$mt-2: 2em;
+$mt-3: 3em;
+$mt-4: 4em;
+$mt-5: 5em;
+$mr-1: 1em;
+$mr-2: 2em;
+$mr-3: 3em;
+$mr-4: 4em;
+$mr-5: 5em;
+$mb-1: 1em;
+$mb-2: 2em;
+$mb-3: 3em;
+$mb-4: 4em;
+$mb-5: 5em;
+$ml-1: 1em;
+$ml-2: 2em;
+$ml-3: 3em;
+$ml-4: 4em;
+$ml-5: 5em;
+$m-1: 1em;
+$m-2: 2em;
+$m-3: 3em;
+$m-4: 4em;
+$m-5: 5em;
+$my-1: 1em 0;
+$my-2: 2em 0;
+$my-3: 3em 0;
+$my-4: 4em 0;
+$my-5: 5em 0;
+$mx-1: 0 1em;
+$mx-2: 0 2em;
+$mx-3: 0 3em;
+$mx-4: 0 4em;
+$mx-5: 0 5em;
+
+// padding
+$pt-1: 1em;
+$pt-2: 2em;
+$pt-3: 3em;
+$pt-4: 4em;
+$pt-5: 5em;
+$pr-1: 1em;
+$pr-2: 2em;
+$pr-3: 3em;
+$pr-4: 4em;
+$pr-5: 5em;
+$pb-1: 1em;
+$pb-2: 2em;
+$pb-3: 3em;
+$pb-4: 4em;
+$pb-5: 5em;
+$pl-1: 1em;
+$pl-2: 2em;
+$pl-3: 3em;
+$pl-4: 4em;
+$pl-5: 5em;
+$p-1: 1em;
+$p-2: 2em;
+$p-3: 3em;
+$p-4: 4em;
+$p-5: 5em;
+$py-1: 1em 0;
+$py-2: 2em 0;
+$py-3: 3em 0;
+$py-4: 4em 0;
+$py-5: 5em 0;
+$px-1: 0 1em;
+$px-2: 0 2em;
+$px-3: 0 3em;
+$px-4: 0 4em;
+$px-5: 0 5em;
+
+// gap for flexbox
+$gap-thin: 0.5em;
+$gap-1: 1em;
+$gap-2: 2em;
+$gap-3: 3em;
+$gap-4: 4em;
+$gap-5: 5em;

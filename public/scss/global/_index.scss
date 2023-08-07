@@ -1,0 +1,19 @@
+// import variables
+@use '../components/abstract' as *;
+@use '../components/add_new_class' as *;
+@use '../components/breakpoint' as *;
+@use '../components/feature' as *;
+@use './color' as *;
+@use './default' as *;
+@use './font' as *;
+@use './layout' as *;
+
+// export variables
+@forward '../components/abstract';
+@forward '../components/add_new_class';
+@forward '../components/breakpoint';
+@forward '../components/feature';
+@forward './color';
+@forward './default';
+@forward './font';
+@forward './layout';
