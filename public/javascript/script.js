@@ -64,7 +64,7 @@ function btnHero() {
 };
 
 function getDataObject() {
-    const data = '/public/data/data.json';
+    const data = 'public/data/data.json';
 
     const about = document.querySelector('.about');
     const services = document.querySelector('.services');
