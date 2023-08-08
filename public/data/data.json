@@ -1,7 +1,7 @@
 {
   "about": [
     {
-      "image_about": "public/assets/dedi-indrawan-about.png",
+      "image_about": "https://i.postimg.cc/PJnf9pRP/IMG-20230730-230028.png",
       "subtitle_about": "I am Dedi Indrawan, I'm a passionate on Web Developer and Content Creator with one year of experience.",
       "description_about": "I'm proactive, fast, proficient learner in multitasking. Love chalenges that can improve my ability and experience in achieving both personal and company goals. Being able to work both in teams and in individuals.",
       "bio_name": "dedi indrawan",
@@ -74,6 +74,13 @@
       "header_resume_6": "2003 - 2006",
       "subtitle_resume_6": "izzata vocational high school",
       "description_resume_6": "create web project and routine post programming content on Instagram and YouTube"
+    }
+  ],
+  "portfolio": [
+    {
+      "image_portfolio_1": "https://i.postimg.cc/HkkYqCB4/Copy-of-Responsive-Web-Design.jpg",
+      "image_portfolio_2": "https://i.postimg.cc/yNNT3Wng/Copy-of-Copy-of-Responsive-Web-Design.jpg",
+      "image_portfolio_3": "https://i.postimg.cc/g053wsnQ/Copy-of-Responsive-Web-Design-1.jpg"
     }
   ]
 }

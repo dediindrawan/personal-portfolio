@@ -64,11 +64,13 @@ function btnHero() {
 };
 
 // import data from object on data file
-const data = 'public/data/data.json';
+const data = '/public/data/data.json';
 
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
 const resume = document.querySelector('.resume');
+const portfolio = document.querySelector('.portfolio');
+
 const getListData = () => {
     fetch(data)
         .then(response => {
@@ -309,6 +311,45 @@ const getListData = () => {
                             </div>
                         </div>
                     </div>
+                    `
+            });
+            // dom implementation to portfolio section
+            let portfolioObj = getData.portfolio;
+            portfolioObj.forEach(obj => {
+                portfolio.innerHTML +=
+                    `
+                    <!-- title -->
+                    <h3 class="title">my portfolio <span class="page"><small>05.</small></span></h3>
+                    <!-- card -->
+                    <ul class="card">
+                        <li>
+                            <a href="https://dediindrawan.github.io/coffeeshop-web-design/" target="_blank">
+                                <img src="${obj.image_portfolio_1}" alt="image">
+                                <span class="detail">
+                                    <i class="fa-regular fa-image"></i>
+                                    <span class="caption">website</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dediindrawan.github.io/todo-app/" target="_blank">
+                                <img src="${obj.image_portfolio_2}" alt="image">
+                                <span class="detail">
+                                    <i class="fa-regular fa-image"></i>
+                                    <span class="caption">website</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dediindrawan.github.io/kalkulator-diskon/" target="_blank">
+                                <img src="${obj.image_portfolio_3}" alt="image">
+                                <span class="detail">
+                                    <i class="fa-regular fa-image"></i>
+                                    <span class="caption">website</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                     `
             });
         }).catch(error => {
