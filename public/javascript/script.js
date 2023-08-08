@@ -64,7 +64,7 @@ function btnHero() {
 };
 
 // import data from object on data file
-const data = '/public/data/data.json';
+const data = 'public/data/data.json';
 
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
