@@ -1,7 +1,7 @@
 {
   "about": [
     {
-      "image_about": "http://127.0.0.1:5500/public/assets/dedi-indrawan-about.png",
+      "image_about": "https://assets.codepen.io/8396601/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1687327614&width=512",
       "subtitle_about": "I am Dedi Indrawan, I'm a passionate on Web Developer and Content Creator with one year of experience.",
       "description_about": "I'm proactive, fast, proficient learner in multitasking. Love chalenges that can improve my ability and experience in achieving both personal and company goals. Being able to work both in teams and in individuals.",
       "bio_name": "dedi indrawan",
@@ -131,15 +131,15 @@
   "portfolio": [
     {
       "url_image_portfolio": "https://dediindrawan.github.io/coffeeshop-web-design/",
-      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-1.jpg"
+      "image_portfolio": "https://assets.codepen.io/8396601/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1687327614&width=512"
     },
     {
       "url_image_portfolio": "https://dediindrawan.github.io/todo-app/",
-      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-2.jpg"
+      "image_portfolio": "https://assets.codepen.io/8396601/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1687327614&width=512"
     },
     {
       "url_image_portfolio": "https://dediindrawan.github.io/kalkulator-diskon/",
-      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-3.jpg"
+      "image_portfolio": "https://assets.codepen.io/8396601/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1687327614&width=512"
     }
   ]
 }
