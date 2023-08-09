@@ -996,6 +996,7 @@ body {
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
   width: calc(50% - 2.85em);
   padding: 2em;
+  text-align: center;
   border-radius: 10px;
   background: #252425;
   position: relative;
@@ -1112,6 +1113,7 @@ body {
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
   width: calc(50% - 2.85em);
   padding: 2em;
+  text-align: center;
   border-radius: 10px;
   background: #252425;
   position: relative;

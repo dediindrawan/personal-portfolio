@@ -64,7 +64,7 @@ function btnHero() {
 };
 
 // import data from local database
-const data = 'public/data/data.json';
+const data = '/public/data/data.json';
 
 // create variable to dom execution
 const about = document.querySelector('.about');
