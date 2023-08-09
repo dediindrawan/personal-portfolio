@@ -1,86 +1,145 @@
 {
   "about": [
     {
-      "image_about": "https://i.postimg.cc/PJnf9pRP/IMG-20230730-230028.png",
+      "image_about": "http://127.0.0.1:5500/public/assets/dedi-indrawan-about.png",
       "subtitle_about": "I am Dedi Indrawan, I'm a passionate on Web Developer and Content Creator with one year of experience.",
       "description_about": "I'm proactive, fast, proficient learner in multitasking. Love chalenges that can improve my ability and experience in achieving both personal and company goals. Being able to work both in teams and in individuals.",
       "bio_name": "dedi indrawan",
       "bio_age": 34,
       "bio_phone": "+62 897-4523-500",
       "bio_address": "bogor, indonesia",
-      "communication_skills": "Communication",
-      "communication_value": "50%",
-      "teamwork_skills": "Teamwork",
-      "teamwork_value": "50%",
-      "leadership_skills": "Leadership",
-      "leadership_value": "50%",
-      "self_motivation_skills": "Self-motivation",
-      "self_motivation_value": "50%",
-      "html_skills": "HTML",
-      "html_value": "50%",
-      "css_skills": "CSS",
-      "css_value": "50%",
-      "sass_skills": "Sass",
-      "sass_value": "50%",
-      "javascript_skills": "JavaScript",
-      "javascript_value": "50%",
-      "nodejs_skills": "Node.Js",
-      "nodejs_value": "50%",
-      "expressjs_skills": "Express.Js",
-      "expressjs_value": "50%",
-      "mysql_skills": "MySql",
-      "mysql_value": "50%",
-      "vuejs_skills": "Vue.Js",
-      "vuejs_value": "50%",
-      "tailwind_skills": "Tailwind",
-      "tailwind_value": "50%",
-      "bootstrap_skills": "Bootstrap",
-      "bootstrap_value": "50%"
+      "personal": [
+        {
+          "personal_skills": "Communication",
+          "personal_values": "50%"
+        },
+        {
+          "personal_skills": "Teamwork",
+          "personal_values": "50%"
+        },
+        {
+          "personal_skills": "Leadership",
+          "personal_values": "50%"
+        },
+        {
+          "personal_skills": "Self-motivation",
+          "personal_values": "50%"
+        }
+      ],
+      "professional": [
+        {
+          "professional_skills": "HTML",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "CSS",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Sass",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "JavaScript",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Node.Js",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Express.Js",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "MySql",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Vue.Js",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Tailwind",
+          "professional_values": "50%"
+        },
+        {
+          "professional_skills": "Bootstrap",
+          "professional_values": "50%"
+        }
+      ]
     }
   ],
   "services": [
     {
-      "subtitle_services_1": "creative design",
-      "description_services_1": "Modern and beautiful design",
-      "subtitle_services_2": "branding",
-      "description_services_2": "Modern and beautiful design",
-      "subtitle_services_3": "user interface",
-      "description_services_3": "Modern and beautiful design",
-      "subtitle_services_4": "user experience",
-      "description_services_4": "Modern and beautiful design",
-      "subtitle_services_5": "clean code",
-      "description_services_5": "Modern and beautiful design",
-      "subtitle_services_6": "fast support",
-      "description_services_6": "Modern and beautiful design"
+      "subtitle_services": "creative design",
+      "description_services": "Modern and beautiful design"
+    },
+    {
+      "subtitle_services": "branding",
+      "description_services": "Modern and beautiful design"
+    },
+    {
+      "subtitle_services": "user interface",
+      "description_services": "Modern and beautiful design"
+    },
+    {
+      "subtitle_services": "user experience",
+      "description_services": "Modern and beautiful design"
+    },
+    {
+      "subtitle_services": "clean code",
+      "description_services": "Modern and beautiful design"
+    },
+    {
+      "subtitle_services": "fast support",
+      "description_services": "Modern and beautiful design"
     }
   ],
   "resume": [
     {
-      "header_resume_1": "2022 - Present",
-      "subtitle_resume_1": "web developer & content creator",
-      "description_resume_1": "create web project and routine post programming content on Instagram and YouTube",
-      "header_resume_2": "2018 - 2020",
-      "subtitle_resume_2": "dispatcher taxi hotel",
-      "description_resume_2": "create web project and routine post programming content on Instagram and YouTube",
-      "header_resume_3": "2017 - 2018",
-      "subtitle_resume_3": "Head & Store Manager",
-      "description_resume_3": "create web project and routine post programming content on Instagram and YouTube",
-      "header_resume_4": "2013 - 2016",
-      "subtitle_resume_4": "mixer painting car color",
-      "description_resume_4": "create web project and routine post programming content on Instagram and YouTube",
-      "header_resume_5": "2007 - 2013",
-      "subtitle_resume_5": "mixer painting car color",
-      "description_resume_5": "create web project and routine post programming content on Instagram and YouTube",
-      "header_resume_6": "2003 - 2006",
-      "subtitle_resume_6": "izzata vocational high school",
-      "description_resume_6": "create web project and routine post programming content on Instagram and YouTube"
+      "header_resume": "2022 - Present",
+      "subtitle_resume": "web developer & content creator",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+    },
+    {
+      "header_resume": "2018 - 2020",
+      "subtitle_resume": "dispatcher taxi hotel",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+    },
+    {
+      "header_resume": "2017 - 2018",
+      "subtitle_resume": "Head & Store Manager",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+    },
+    {
+      "header_resume": "2013 - 2016",
+      "subtitle_resume": "mixer painting car color",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+    },
+    {
+      "header_resume": "2007 - 2013",
+      "subtitle_resume": "mixer painting car color",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+    },
+    {
+      "header_resume": "2003 - 2006",
+      "subtitle_resume": "izzata vocational high school",
+      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
     }
   ],
   "portfolio": [
     {
-      "image_portfolio_1": "https://i.postimg.cc/HkkYqCB4/Copy-of-Responsive-Web-Design.jpg",
-      "image_portfolio_2": "https://i.postimg.cc/yNNT3Wng/Copy-of-Copy-of-Responsive-Web-Design.jpg",
-      "image_portfolio_3": "https://i.postimg.cc/g053wsnQ/Copy-of-Responsive-Web-Design-1.jpg"
+      "url_image_portfolio": "https://dediindrawan.github.io/coffeeshop-web-design/",
+      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-1.jpg"
+    },
+    {
+      "url_image_portfolio": "https://dediindrawan.github.io/todo-app/",
+      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-2.jpg"
+    },
+    {
+      "url_image_portfolio": "https://dediindrawan.github.io/kalkulator-diskon/",
+      "image_portfolio": "http://127.0.0.1:5500/public/assets/dedi-indrawan-portfolio-3.jpg"
     }
   ]
 }

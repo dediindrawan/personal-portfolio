@@ -63,311 +63,176 @@ function btnHero() {
     window.location.href = "pages/contact.html";
 };
 
-function getDataObject() {
-    const data = '../data/data.json';
+// import data from local database
+const data = '/public/data/data.json';
 
-    const about = document.querySelector('.about');
-    const services = document.querySelector('.services');
-    const resume = document.querySelector('.resume');
-    const portfolio = document.querySelector('.portfolio');
+// create variable to dom execution
+const about = document.querySelector('.about');
+const services = document.querySelector('.services');
+const resume = document.querySelector('.resume');
+const portfolio = document.querySelector('.portfolio');
 
-    const getDataItem = () => {
-        fetch(data)
-            .then(response => {
-                return response.json();
-            }).then(getData => {
-                // dom implementation to about section
-                let aboutObj = getData.about;
-                aboutObj.forEach(obj => {
-                    about.innerHTML =
-                        `
-                        <!-- card -->
-                        <figure class="card">
-                            <!-- image -->
-                            <div class="image">
-                                <img src="${obj.image_about}" alt="image">
-                            </div>
-                            <!-- caption -->
-                            <figcation class="caption">
-                                <!-- title -->
-                                <h3 class="title">about me <span class="page"><small>01.</small></span></h3>
-                                <!-- subtitle -->
-                                <h4 class="subtitle">${obj.subtitle_about}</h4>
-                                <!-- description -->
-                                <p class="description">${obj.description_about}</p>
-                                <!-- bio -->
-                                <ul class="bio">
-                                    <li>name: <span>${obj.bio_name}</span></li>
-                                    <li>age: <span>${obj.bio_age}</span></li>
-                                    <li>phone: <span>${obj.bio_phone}</span></li>
-                                    <li>address: <span>${obj.bio_address}</span></li>
-                                    <!-- card icon -->
-                                    <i class="fa-solid fa-address-card bio-card-icon"></i>
-                                </ul>
-                            </figcation>
-                        </figure>
-                        <!-- skills -->
-                        <div class="skills">
-                            <!-- title -->
-                            <h3 class="title">my skills <span class="page"><small>02.</small></span></h3>
-                            <!-- card -->
-                            <div class="card">
-                                <!-- list -->
-                                <div class="list">
-                                    <h3 class="subtitle"><span class="icon"><i
-                                                class="fa-solid fa-address-card card-icon"></i></span>Personal Skills
-                                    </h3>
-                                    <!-- progress -->
-                                    <ul class="progress">
-                                        <li>
-                                            <span class="chart-title">${obj.communication_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.communication_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.teamwork_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.teamwork_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.leadership_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.leadership_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.self_motivation_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.self_motivation_value}</small></div>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- list -->
-                                <div class="list">
-                                    <h3 class="subtitle"><span class="icon"><i
-                                                class="fa-solid fa-bars-progress"></i></span>Professional Skills</h3>
-                                    <!-- progress -->
-                                    <ul class="progress">
-                                        <li>
-                                            <span class="chart-title">${obj.html_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.html_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.css_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.css_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.sass_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.sass_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.javascript_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.javascript_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.nodejs_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.nodejs_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.expressjs_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.expressjs_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.mysql_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.mysql_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.vuejs_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.vuejs_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.tailwind_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.tailwind_value}</small></div>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="chart-title">${obj.bootstrap_skills}</span>
-                                            <span class="chart">
-                                                <div class="bars"><small class="value">${obj.bootstrap_value}</small></div>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        `
-                });
-                // dom implementation to services section
-                let servicesObj = getData.services;
-                servicesObj.forEach(obj => {
-                    services.innerHTML =
-                        `
+// export data and sending to the web page
+const getDataObject = () => {
+    fetch(data)
+        .then(res => {
+            return res.json();
+        }).then(getData => {
+            // dom implementation to about content
+            about.innerHTML = '';
+            let aboutObj = getData.about[0];
+            let personalSkills = aboutObj.personal.map(dataItems => dataItems.personal_skills);
+            let personalValues = aboutObj.personal.map(dataItems => dataItems.personal_values);
+            let professionalSkills = aboutObj.professional.map(dataItems => dataItems.professional_skills);
+            let professionalValues = aboutObj.professional.map(dataItems => dataItems.professional_values);
+            about.innerHTML +=
+                `
+                <!-- card -->
+                <figure class="card">
+                    <!-- image -->
+                    <div class="image">
+                        <img src="${aboutObj.image_about}" alt="image">
+                    </div>
+                    <!-- caption -->
+                    <figcation class="caption">
                         <!-- title -->
-                        <h3 class="title">my services <span class="page"><small>03.</small></span></h3>
-                        <!-- card -->
-                        <ul class="card">
-                            <li>
-                                <i class="fa-solid fa-pencil"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_1}</h4><span class="description">${obj.description_services_1}</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-flag"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_2}</h4><span class="description">${obj.description_services_2}</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-laptop"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_3}</h4><span class="description">${obj.description_services_3}</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-briefcase"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_4}</h4><span class="description">${obj.description_services_4}</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-code"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_5}</h4><span class="description">${obj.description_services_5}</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-life-ring"></i>
-                                <h4 class="subtitle">${obj.subtitle_services_6}</h4><span class="description">${obj.description_services_6}</span>
-                            </li>
+                        <h3 class="title">about me <span class="page"><small>01.</small></span></h3>
+                        <!-- subtitle -->
+                        <h4 class="subtitle">${aboutObj.subtitle_about}</h4>
+                        <!-- description -->
+                        <p class="description">${aboutObj.description_about}</p>
+                        <!-- bio -->
+                        <ul class="bio">
+                            <li>name: <span>${aboutObj.bio_name}</span></li>
+                            <li>age: <span>${aboutObj.bio_age}</span></li>
+                            <li>phone: <span>${aboutObj.bio_phone}</span></li>
+                            <li>address: <span>${aboutObj.bio_address}</span></li>
+                            <!-- card icon -->
+                            <i class="fa-solid fa-address-card bio-card-icon"></i>
                         </ul>
-                        `
-                });
-                // dom implementation to resume section
-                let resumeObj = getData.resume;
-                resumeObj.forEach(obj => {
-                    resume.innerHTML =
-                        `
-                        <!-- title -->
-                        <h3 class="title">my resume <span class="page"><small>04.</small></span></h3>
-                        <!-- wrapper container -->
-                        <div class="wrapper-container">
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_1}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_1}</h4>
-                                    <div class="description">${obj.description_resume_1}</div>
-                                </div>
-                            </div>
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_2}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_2}</h4>
-                                    <div class="description">${obj.description_resume_2}</div>
-                                </div>
-                            </div>
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_3}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_3}</h4>
-                                    <div class="description">${obj.description_resume_3}</div>
-                                </div>
-                            </div>
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_4}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_4}</h4>
-                                    <div class="description">${obj.description_resume_4}</div>
-                                </div>
-                            </div>
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_5}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_5}</h4>
-                                    <div class="description">${obj.description_resume_5}</div>
-                                </div>
-                            </div>
-                            <!-- wrapper -->
-                            <div class="wrapper">
-                                <div class="experience">
-                                    <div class="header">${obj.header_resume_6}</div>
-                                    <h4 class="subtitle">${obj.subtitle_resume_6}</h4>
-                                    <div class="description">${obj.description_resume_6}</div>
-                                </div>
-                            </div>
+                    </figcation>
+                </figure>
+                <!-- skills -->
+                <div class="skills">
+                    <!-- title -->
+                    <h3 class="title">my skills <span class="page"><small>02.</small></span></h3>
+                    <!-- card -->
+                    <div class="card">
+                        <!-- list -->
+                        <div class="list">
+                            <h3 class="subtitle"><span class="icon"><i
+                                        class="fa-solid fa-address-card card-icon"></i></span>Personal Skills
+                            </h3>
+                            <!-- progress -->
+                            <ul class="progress">
+                            ${personalSkills.map((skills, listIndex) => `
+                                <li>
+                                    <span class="chart-title">${skills}</span>
+                                    <span class="chart">
+                                        <div class="bars"><small class="value">${personalValues[listIndex]}</small></div>
+                                    </span>
+                                </li>
+                            `).join('')}
+                            </ul>
                         </div>
-                        `
-                });
-            }).catch(error => {
-                console.error(error);
-            });
+                        <!-- list -->
+                        <div class="list">
+                            <h3 class="subtitle"><span class="icon"><i
+                                        class="fa-solid fa-bars-progress"></i></span>Professional Skills</h3>
+                            <!-- progress -->
+                            <ul class="progress">
+                            ${professionalSkills.map((skills, listIndex) => `
+                                <li>
+                                    <span class="chart-title">${skills}</span>
+                                    <span class="chart">
+                                        <div class="bars"><small class="value">${professionalValues[listIndex]}</small></div>
+                                    </span>
+                                </li>
+                            `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                `
+            // dom implementation to services content
+            services.innerHTML = '';
+            let servicesObj = getData.services;
+            let subtitleServices = servicesObj.map(dataItems => dataItems.subtitle_services);
+            let descriptionServices = servicesObj.map(dataItems => dataItems.description_services);
+            services.innerHTML +=
+                `
+                <!-- title -->
+                <h3 class="title">my services <span class="page"><small>03.</small></span></h3>
+                <!-- card -->
+                <ul class="card">
+                ${subtitleServices.map((services, listIndex) => `
+                    <li>
+                        <i class="fa-solid fa-pencil"></i>
+                        <h4 class="subtitle">${services}</h4><span class="description">${descriptionServices[listIndex]}</span>
+                    </li>
+                `).join('')}
+                </ul>
+                `
+            // dom implementation to resume content
+            resume.innerHTML = '';
+            let resumeObj = getData.resume;
+            let headerResume = resumeObj.map(dataItems => dataItems.header_resume);
+            let subtitleResume = resumeObj.map(dataItems => dataItems.subtitle_resume);
+            let descriptionResume = resumeObj.map(dataItems => dataItems.description_resume);
+            resume.innerHTML +=
+                `
+                <!-- title -->
+                <h3 class="title">my resume <span class="page"><small>04.</small></span></h3>
+                <!-- wrapper container -->
+                <div class="wrapper-container">
+                ${headerResume.map((resume, listIndex) => `
+                    <!-- wrapper -->
+                    <div class="wrapper">
+                        <div class="experience">
+                            <div class="header">${resume}</div>
+                            <h4 class="subtitle">${subtitleResume[listIndex]}</h4>
+                            <div class="description">${descriptionResume[listIndex]}</div>
+                        </div>
+                    </div>
+                `).join('')}
+                </div>
+                `
+            // dom implementation to portfolio content
+            portfolio.innerHTML = '';
+            let portfolioObj = getData.portfolio;
+            let urlImagePortfolio = portfolioObj.map(dataItems => dataItems.url_image_portfolio);
+            let imagePortfolio = portfolioObj.map(dataItems => dataItems.image_portfolio);
+            portfolio.innerHTML +=
+                `
+                <!-- title -->
+                <h3 class="title">my portfolio <span class="page"><small>05.</small></span></h3>
+                <!-- card -->
+                <ul class="card">
+                ${urlImagePortfolio.map((portfolio, listIndex) => `
+                <li>
+                    <a href="${portfolio}" target="_blank">
+                        <img src="${imagePortfolio[listIndex]}" alt="image">
+                        <span class="detail">
+                            <i class="fa-regular fa-image"></i>
+                            <span class="caption">website</span>
+                        </span>
+                    </a>
+                </li>
+                `).join('')}
+                </ul>
+                `
+        }).catch(err => {
+            console.log('Oops, sorry!! We\'re have an something error to load data. Detail error => ' + err);
 
-        fetch(data)
-            .then(response => {
-                return response.json();
-            }).then(getData => {
-                // dom implementation to portfolio section
-                let portfolioObj = getData.portfolio;
-                portfolioObj.forEach(obj => {
-                    portfolio.innerHTML =
-                        `
-                        <!-- title -->
-                        <h3 class="title">my portfolio <span class="page"><small>05.</small></span></h3>
-                        <!-- card -->
-                        <ul class="card">
-                            <li>
-                                <a href="https://dediindrawan.github.io/coffeeshop-web-design/" target="_blank">
-                                    <img src="${obj.image_portfolio_1}" alt="image">
-                                    <span class="detail">
-                                        <i class="fa-regular fa-image"></i>
-                                        <span class="caption">website</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dediindrawan.github.io/todo-app/" target="_blank">
-                                    <img src="${obj.image_portfolio_2}" alt="image">
-                                    <span class="detail">
-                                        <i class="fa-regular fa-image"></i>
-                                        <span class="caption">website</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dediindrawan.github.io/kalkulator-diskon/" target="_blank">
-                                    <img src="${obj.image_portfolio_3}" alt="image">
-                                    <span class="detail">
-                                        <i class="fa-regular fa-image"></i>
-                                        <span class="caption">website</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        `
-                });
-            }).catch(error => {
-                console.log(error);
-            });
-    };
-    document.addEventListener('DOMContentLoaded', getDataItem);
+            let errorMessage = `<em><h1>Oops, sorry!!</h1><h4>We\'re have an something error to load data.</h4></em><br><br>Detail error => "${err}"`;
 
+            if (!portfolio.textContent) {
+                portfolio.innerHTML = `${errorMessage}`;
+                portfolio.style.textAlign = 'center';
+            };
+        });
 };
-getDataObject();
+document.addEventListener('DOMContentLoaded', getDataObject);
 
 // set copyright year to automatically updated
 function displayCopyrightYear() {
