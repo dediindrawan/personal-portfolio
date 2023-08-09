@@ -37,7 +37,7 @@ function navbar() {
         };
     });
 
-    // click everywhere on window to close nav link
+    // click anywhere on window to close nav link
     document.addEventListener('click', (e) => {
         if (!toggleMenu.contains(e.target) && !navLinkMenu.contains(e.target)) {
             navLinkMenu.classList.remove('nav-open');
@@ -64,7 +64,7 @@ function btnHero() {
 };
 
 // import data from local database
-const data = '/public/data/data.json';
+const data = 'public/data/data.json';
 
 // create variable to dom execution
 const about = document.querySelector('.about');
@@ -223,13 +223,6 @@ const getDataObject = () => {
                 `
         }).catch(err => {
             console.log('Oops, sorry!! We\'re have an something error to load data. Detail error => ' + err);
-
-            let errorMessage = `<em><h1>Oops, sorry!!</h1><h4>We\'re have an something error to load data.</h4></em><br><br>Detail error => "${err}"`;
-
-            if (!portfolio.textContent) {
-                portfolio.innerHTML = `${errorMessage}`;
-                portfolio.style.textAlign = 'center';
-            };
         });
 };
 document.addEventListener('DOMContentLoaded', getDataObject);
