@@ -16,12 +16,23 @@ const getDataObject = () => {
         .then(res => {
             return res.json();
         }).then(getData => {
-            // dom implementation to about content
+            // ========== dom implementation to about content ========== //
             let aboutObj = getData.about[0];
-            let personalSkills = aboutObj.personal.map(dataItems => dataItems.personal_skills);
-            let personalValues = aboutObj.personal.map(dataItems => dataItems.personal_values);
-            let professionalSkills = aboutObj.professional.map(dataItems => dataItems.professional_skills);
-            let professionalValues = aboutObj.professional.map(dataItems => dataItems.professional_values);
+
+            // reverse data form highest to lowest on personal value
+            const reversePersonalValue = aboutObj.personal.sort((a, b) => parseInt(a.personal_values) - parseInt(b.personal_values));
+            reversePersonalValue.reverse();
+
+            // reverse data form highest to lowest on professional value
+            const reverseProfessionalValue = aboutObj.professional.sort((a, b) => parseInt(a.professional_values) - parseInt(b.professional_values));
+            reverseProfessionalValue.reverse();
+
+            // mapping inner object array on about property to get specific data
+            let personalSkills = reversePersonalValue.map(dataItems => dataItems.personal_skills);
+            let personalValues = reversePersonalValue.map(dataItems => dataItems.personal_values);
+            let professionalSkills = reverseProfessionalValue.map(dataItems => dataItems.professional_skills);
+            let professionalValues = reverseProfessionalValue.map(dataItems => dataItems.professional_values);
+
             about.forEach(abouts => {
                 abouts.innerHTML = '';
                 abouts.innerHTML +=
@@ -65,12 +76,12 @@ const getDataObject = () => {
                                 <!-- progress -->
                                 <ul class="progress">
                                 ${personalSkills.map((skills, listIndex) => `
-                                    <li>
-                                        <span class="chart-title">${skills}</span>
-                                        <span class="chart">
-                                            <div class="personal bars"><small class="value">${personalValues[listIndex]}</small></div>
-                                        </span>
-                                    </li>
+                                <li>
+                                    <span class="chart-title">${skills}</span>
+                                    <span class="chart">
+                                        <div class="personal bars"><small class="value">${personalValues[listIndex]}</small></div>
+                                    </span>
+                                </li>
                                 `).join('')}
                                 </ul>
                             </div>
@@ -108,7 +119,7 @@ const getDataObject = () => {
                 let barsValue = rootBars.innerHTML;
                 profBars.style.width = barsValue;
             });
-            // dom implementation to services content
+            // ========== dom implementation to services content ========== //
             let servicesObj = getData.services;
             let subtitleServices = servicesObj.map(dataItems => dataItems.subtitle_services);
             let descriptionServices = servicesObj.map(dataItems => dataItems.description_services);
@@ -129,7 +140,7 @@ const getDataObject = () => {
                     </ul>
                     `
             });
-            // dom implementation to resume content
+            // ========== dom implementation to resume content ========== //
             let resumeObj = getData.resume;
             let headerResume = resumeObj.map(dataItems => dataItems.header_resume);
             let subtitleResume = resumeObj.map(dataItems => dataItems.subtitle_resume);
@@ -155,7 +166,7 @@ const getDataObject = () => {
                     </div>
                     `
             });
-            // dom implementation to portfolio content
+            // ========== dom implementation to portfolio content ========== //
             let portfolioObj = getData.portfolio;
             let urlImagePortfolio = portfolioObj.map(dataItems => dataItems.url_image_portfolio);
             let imagePortfolio = portfolioObj.map(dataItems => dataItems.image_portfolio);
