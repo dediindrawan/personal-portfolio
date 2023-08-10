@@ -60,7 +60,7 @@ navbar();
 
 // direct button on click to contact page
 function btnHero() {
-    window.location.href = "pages/contact.html";
+    window.location.href = "contact.html";
 };
 
 function barsValue() {
