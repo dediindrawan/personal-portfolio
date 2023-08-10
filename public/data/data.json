@@ -11,33 +11,33 @@
       "personal": [
         {
           "personal_skills": "Communication",
-          "personal_values": "50%"
+          "personal_values": "75%"
         },
         {
           "personal_skills": "Teamwork",
-          "personal_values": "50%"
+          "personal_values": "80%"
         },
         {
           "personal_skills": "Leadership",
-          "personal_values": "50%"
+          "personal_values": "80%"
         },
         {
           "personal_skills": "Self-motivation",
-          "personal_values": "50%"
+          "personal_values": "85%"
         }
       ],
       "professional": [
         {
           "professional_skills": "HTML",
-          "professional_values": "50%"
+          "professional_values": "80%"
         },
         {
           "professional_skills": "CSS",
-          "professional_values": "50%"
+          "professional_values": "80%"
         },
         {
           "professional_skills": "Sass",
-          "professional_values": "50%"
+          "professional_values": "75%"
         },
         {
           "professional_skills": "JavaScript",
@@ -45,11 +45,11 @@
         },
         {
           "professional_skills": "Node.Js",
-          "professional_values": "50%"
+          "professional_values": "25%"
         },
         {
           "professional_skills": "Express.Js",
-          "professional_values": "50%"
+          "professional_values": "25%"
         },
         {
           "professional_skills": "MySql",
@@ -57,7 +57,7 @@
         },
         {
           "professional_skills": "Vue.Js",
-          "professional_values": "50%"
+          "professional_values": "35%"
         },
         {
           "professional_skills": "Tailwind",
