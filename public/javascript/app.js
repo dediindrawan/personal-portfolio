@@ -68,7 +68,7 @@ const getDataObject = () => {
                                     <li>
                                         <span class="chart-title">${skills}</span>
                                         <span class="chart">
-                                            <div class="bars"><small class="value">${personalValues[listIndex]}</small></div>
+                                            <div class="personal bars"><small class="value">${personalValues[listIndex]}</small></div>
                                         </span>
                                     </li>
                                 `).join('')}
@@ -84,7 +84,7 @@ const getDataObject = () => {
                                     <li>
                                         <span class="chart-title">${skills}</span>
                                         <span class="chart">
-                                            <div class="bars"><small class="value">${professionalValues[listIndex]}</small></div>
+                                            <div class="professional bars"><small class="value">${professionalValues[listIndex]}</small></div>
                                         </span>
                                     </li>
                                 `).join('')}
@@ -93,6 +93,20 @@ const getDataObject = () => {
                         </div>
                     </div>
                     `
+            });
+            // compare bars width as bars value on skills personal bars value 
+            let personalBars = document.querySelectorAll('.personal');
+            personalBars.forEach(personBars => {
+                let rootBars = personBars.firstElementChild;
+                let barsValue = rootBars.innerHTML;
+                personBars.style.width = barsValue;
+            });
+            // compare bars width as bars value on skills professional bars value 
+            let professionalBars = document.querySelectorAll('.professional');
+            professionalBars.forEach(profBars => {
+                let rootBars = profBars.firstElementChild;
+                let barsValue = rootBars.innerHTML;
+                profBars.style.width = barsValue;
             });
             // dom implementation to services content
             let servicesObj = getData.services;
@@ -168,7 +182,7 @@ const getDataObject = () => {
                     `
             });
         }).catch(err => {
-            console.log('Oops, sorry!! We\'re have an something error to load data. Detail error => ' + err);
+            console.log('Oops, sorry!! We\'re looks like having trouble to load data. Detail error => ' + err);
         });
 };
 document.addEventListener('DOMContentLoaded', getDataObject);

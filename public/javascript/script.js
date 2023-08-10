@@ -63,10 +63,6 @@ function btnHero() {
     window.location.href = "contact.html";
 };
 
-function barsValue() {
-let 
-};
-
 // set copyright year to automatically updated
 function displayCopyrightYear() {
     let year = document.querySelectorAll('.year'),
