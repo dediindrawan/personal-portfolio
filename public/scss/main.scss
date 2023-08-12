@@ -283,6 +283,7 @@
         flex-direction: column;
         background: $gradient-text;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         position: inherit;
         z-index: 1;

@@ -397,6 +397,7 @@ body {
   flex-direction: column;
   background: linear-gradient(to top right, #ffffff, #ff6913);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   position: inherit;
   z-index: 1;
