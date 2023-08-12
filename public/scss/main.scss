@@ -238,7 +238,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba($color: $dark, $alpha: 0.4);
+      background: $gradient-trans;
     }
     // ========== wrapper ========== //
     .wrapper {
@@ -262,40 +262,43 @@
         max-width: $full;
       }
       // ========== title ========== //
+      .heading {
+        padding-bottom: $pb-1;
+        // ========== breakpoint max width on 575px ========== //
+        @include breakpoint-screen-mobile {
+          padding-top: 12em;
+        }
+        // ========== breakpoint min width on 576px and max width 767px ========== //
+        @include breakpoint-screen-tablet {
+          padding-top: 12em;
+        }
+        // ========== breakpoint min device width on 480px and max device width 1024px ========== //
+        @include breakpoint-screen-mobile-tablet-landscape {
+        }
+      }
+      // ========== title ========== //
       .title {
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        background: $gradient-text;
+        background-clip: text;
+        color: transparent;
         position: inherit;
         z-index: 1;
         // ========== breakpoint max width on 575px ========== //
         @include breakpoint-screen-mobile {
           line-height: 1.25;
-          padding-top: $pt-5;
           font-weight: $ft-s-bold;
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
         @include breakpoint-screen-tablet {
           line-height: 1.25;
-          padding-top: $pt-5;
           font-weight: $ft-s-bold;
         }
         // ========== breakpoint min device width on 480px and max device width 1024px ========== //
         @include breakpoint-screen-mobile-tablet-landscape {
           padding-top: $pt-1;
-        }
-      }
-      // ========== description ========== //
-      .description {
-        position: inherit;
-        z-index: 1;
-        // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
-          margin: $my-1;
-        }
-        // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
-          margin: $my-1;
-        }
-        span {
-          color: $warning;
         }
       }
       // ========== btn hero ========== //
@@ -410,7 +413,8 @@
           img {
             width: $full;
             height: $full;
-            object-fit: fill;
+            object-fit: cover;
+            object-position: top;
             opacity: 0.8;
             transition: opacity $transition;
             background: $dark;
@@ -1355,14 +1359,14 @@
             @include breakpoint-screen-tablet {
               width: $full;
             }
-            .name-input {
+            .wrapper-name-input {
               .error-message {
                 padding-left: $pl-1;
                 text-transform: capitalize;
                 color: $warning;
               }
             }
-            .email-input {
+            .wrapper-email-input {
               .error-message {
                 padding-left: $pl-1;
                 text-transform: capitalize;
@@ -1374,14 +1378,14 @@
         // ========== input section ========== //
         .input-section {
           width: $full;
-          .subject-input {
+          .wrapper-subject-input {
             .error-message {
               padding-left: $pl-1;
               text-transform: capitalize;
               color: $warning;
             }
           }
-          .message-input {
+          .wrapper-message-input {
             .error-message {
               padding-left: $pl-1;
               text-transform: capitalize;

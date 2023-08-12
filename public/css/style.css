@@ -113,7 +113,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   background-color: #1b191b;
-  background-image: url(public/assets/dedi-indrawan-bg-patterns.png);
+  background-image: url(/public/assets/dedi-indrawan-bg-patterns.png);
   background-size: contain;
 }
 
@@ -353,7 +353,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(15, 14, 15, 0.4);
+  background: linear-gradient(to bottom, rgba(15, 14, 15, 0.3) 50%, rgb(27, 25, 27));
 }
 .container .hero .wrapper {
   height: 100vh;
@@ -378,21 +378,38 @@ body {
     max-width: 100%;
   }
 }
+.container .hero .wrapper .heading {
+  padding-bottom: 1em;
+}
+@media screen and (max-width: 575px) {
+  .container .hero .wrapper .heading {
+    padding-top: 12em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container .hero .wrapper .heading {
+    padding-top: 12em;
+  }
+}
 .container .hero .wrapper .title {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to top right, #ffffff, #ff6913);
+  background-clip: text;
+  color: transparent;
   position: inherit;
   z-index: 1;
 }
 @media screen and (max-width: 575px) {
   .container .hero .wrapper .title {
     line-height: 1.25;
-    padding-top: 5em;
     font-weight: 600;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .container .hero .wrapper .title {
     line-height: 1.25;
-    padding-top: 5em;
     font-weight: 600;
   }
 }
@@ -400,23 +417,6 @@ body {
   .container .hero .wrapper .title {
     padding-top: 1em;
   }
-}
-.container .hero .wrapper .description {
-  position: inherit;
-  z-index: 1;
-}
-@media screen and (max-width: 575px) {
-  .container .hero .wrapper .description {
-    margin: 1em 0;
-  }
-}
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .container .hero .wrapper .description {
-    margin: 1em 0;
-  }
-}
-.container .hero .wrapper .description span {
-  color: #ff6913;
 }
 .container .hero .wrapper .btn-hero {
   margin-top: 2em;
@@ -539,7 +539,8 @@ body {
 .container .wrapper-section .about .card .image img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: top;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
   background: #0f0e0f;
@@ -1502,12 +1503,12 @@ body {
     width: 100%;
   }
 }
-.container .wrapper-section .contact .form-group .wrapper .input-section .name-input .error-message {
+.container .wrapper-section .contact .form-group .wrapper .input-section .wrapper-name-input .error-message {
   padding-left: 1em;
   text-transform: capitalize;
   color: #ff6913;
 }
-.container .wrapper-section .contact .form-group .wrapper .input-section .email-input .error-message {
+.container .wrapper-section .contact .form-group .wrapper .input-section .wrapper-email-input .error-message {
   padding-left: 1em;
   text-transform: capitalize;
   color: #ff6913;
@@ -1515,12 +1516,12 @@ body {
 .container .wrapper-section .contact .form-group .input-section {
   width: 100%;
 }
-.container .wrapper-section .contact .form-group .input-section .subject-input .error-message {
+.container .wrapper-section .contact .form-group .input-section .wrapper-subject-input .error-message {
   padding-left: 1em;
   text-transform: capitalize;
   color: #ff6913;
 }
-.container .wrapper-section .contact .form-group .input-section .message-input .error-message {
+.container .wrapper-section .contact .form-group .input-section .wrapper-message-input .error-message {
   padding-left: 1em;
   text-transform: capitalize;
   color: #ff6913;

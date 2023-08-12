@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "sass --watch --no-source-map public/scss/main.scss public/css/style.css && del public/css/style.css.map"
+    "compile": "sass --watch --no-source-map public/scss/main.scss public/css/style.css && rm public/css/style.css.map"
   },
   "author": "",
   "license": "ISC",
