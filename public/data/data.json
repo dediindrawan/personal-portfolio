@@ -72,26 +72,32 @@
   ],
   "services": [
     {
+      "icon_services": "<i class='fa-solid fa-pencil'></i>",
       "subtitle_services": "creative design",
       "description_services": "Modern and beautiful design"
     },
     {
+      "icon_services": "<i class='fa-solid fa-flag'></i>",
       "subtitle_services": "branding",
       "description_services": "Modern and beautiful design"
     },
     {
+      "icon_services": "<i class='fa-solid fa-laptop'></i>",
       "subtitle_services": "user interface",
       "description_services": "Modern and beautiful design"
     },
     {
+      "icon_services": "<i class='fa-solid fa-briefcase'></i>",
       "subtitle_services": "user experience",
       "description_services": "Modern and beautiful design"
     },
     {
+      "icon_services": "<i class='fa-solid fa-code'></i>",
       "subtitle_services": "clean code",
       "description_services": "Modern and beautiful design"
     },
     {
+      "icon_services": "<i class='fa-solid fa-life-ring'></i>",
       "subtitle_services": "fast support",
       "description_services": "Modern and beautiful design"
     }

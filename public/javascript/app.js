@@ -121,6 +121,7 @@ const getDataObject = () => {
             });
             // ========== dom implementation to services content ========== //
             let servicesObj = getData.services;
+            let iconServices = servicesObj.map(dataItems => dataItems.icon_services);
             let subtitleServices = servicesObj.map(dataItems => dataItems.subtitle_services);
             let descriptionServices = servicesObj.map(dataItems => dataItems.description_services);
             services.forEach(servs => {
@@ -133,7 +134,7 @@ const getDataObject = () => {
                     <ul class="card">
                     ${subtitleServices.map((services, listIndex) => `
                         <li>
-                            <i class="fa-solid fa-pencil"></i>
+                            ${iconServices[listIndex]}
                             <h4 class="subtitle">${services}</h4><span class="description">${descriptionServices[listIndex]}</span>
                         </li>
                     `).join('')}
