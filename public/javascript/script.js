@@ -81,7 +81,8 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
         btnBackToTop.style.display = 'flex';
         btnBackToTop.addEventListener('click', () => {
-            window.location.href = '#';
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         });
     } else {
         btnBackToTop.style.display = 'none';
