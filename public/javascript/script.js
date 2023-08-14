@@ -75,6 +75,19 @@ function displayCopyrightYear() {
 };
 displayCopyrightYear();
 
+// set btn back to top
+const btnBackToTop = document.querySelector('.btn-back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        btnBackToTop.style.display = 'flex';
+        btnBackToTop.addEventListener('click', () => {
+            window.location.href = '#';
+        });
+    } else {
+        btnBackToTop.style.display = 'none';
+    };
+});
+
 // create authorization contact form
 const formGroup = document.querySelector('.form-group');
 const nameInput = document.querySelector('.name-input');

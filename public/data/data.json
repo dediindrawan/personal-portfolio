@@ -3,7 +3,7 @@
     {
       "image_about": "https://i.postimg.cc/T38wGc6s/IMG-20230730-230028.png",
       "subtitle_about": "I am a Front-End Developer with one year of experience as a freelancer. Additionally, I am a programming content creator on Instagram & YouTube under the username 'Dedi Indrawan'.",
-      "description_about": "I'm proactive, fast, proficient learner in multitasking. Love chalenges that can improve my ability and experience in achieving both personal and company goals. Being able to work both in teams and in individuals.",
+      "description_about": "Someone who is proactive, easily adapts to changing situations, and possesses good communication skills. Understands the individual's role in achieving common goals and is accustomed to conducting thorough evaluation and analysis. Enjoys challenges that can enhance my abilities and experiences in achieving personal as well as company goals.",
       "bio_name": "dedi indrawan",
       "bio_age": 34,
       "bio_phone": "+62 897-4523-500",
@@ -11,19 +11,19 @@
       "personal": [
         {
           "personal_skills": "Communication",
-          "personal_values": "75%"
+          "personal_values": "85%"
         },
         {
           "personal_skills": "Teamwork",
-          "personal_values": "80%"
+          "personal_values": "75%"
         },
         {
           "personal_skills": "Leadership",
-          "personal_values": "80%"
+          "personal_values": "75%"
         },
         {
-          "personal_skills": "Self-motivation",
-          "personal_values": "85%"
+          "personal_skills": "Critical Thinking",
+          "personal_values": "80%"
         }
       ],
       "professional": [
@@ -37,7 +37,7 @@
         },
         {
           "professional_skills": "Sass",
-          "professional_values": "75%"
+          "professional_values": "70%"
         },
         {
           "professional_skills": "JavaScript",
@@ -45,19 +45,19 @@
         },
         {
           "professional_skills": "Node.Js",
-          "professional_values": "25%"
+          "professional_values": "15%"
         },
         {
           "professional_skills": "Express.Js",
-          "professional_values": "25%"
+          "professional_values": "15%"
         },
         {
           "professional_skills": "MySql",
-          "professional_values": "50%"
+          "professional_values": "35%"
         },
         {
           "professional_skills": "Vue.Js",
-          "professional_values": "35%"
+          "professional_values": "20%"
         },
         {
           "professional_skills": "Tailwind",
@@ -74,38 +74,38 @@
     {
       "icon_services": "<i class='fa-solid fa-pencil'></i>",
       "subtitle_services": "creative design",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Translating graphic designs into programming code to build a responsive and aesthetic website layout."
     },
     {
       "icon_services": "<i class='fa-solid fa-flag'></i>",
       "subtitle_services": "branding",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Creating a consistent positive impression on users, fostering brand recognition, and building long-term relationships with the audience."
     },
     {
       "icon_services": "<i class='fa-solid fa-laptop'></i>",
       "subtitle_services": "user interface",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Creating visually appealing and consistent designs. Focusing on how these elements look and interact with the user."
     },
     {
       "icon_services": "<i class='fa-solid fa-briefcase'></i>",
       "subtitle_services": "user experience",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Crafting a positive and satisfying user experience. Emphasizing how the product functions as a whole and how users feel comfortable using it."
     },
     {
       "icon_services": "<i class='fa-solid fa-code'></i>",
       "subtitle_services": "clean code",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Code that is structured, efficient, effective, and has a solid foundation, easy to manage, and ready to evolve over time."
     },
     {
       "icon_services": "<i class='fa-solid fa-life-ring'></i>",
       "subtitle_services": "fast support",
-      "description_services": "Modern and beautiful design"
+      "description_services": "Identifying appropriate solutions and creating a positive experience for users and the team involved in the project."
     }
   ],
   "resume": [
     {
       "header_resume": "2022 - Present",
-      "subtitle_resume": "web developer & content creator",
+      "subtitle_resume": "front-end developer & content creator",
       "description_resume": "create web project and routine post programming content on Instagram and YouTube"
     },
     {

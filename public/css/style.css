@@ -500,7 +500,7 @@ body {
 }
 .container .wrapper-section .about .card .image {
   width: 40%;
-  height: 535px;
+  height: 530px;
   box-shadow: 0 0 0 7px #1b191b, 0 0 4px 8px rgba(15, 14, 15, 0.4);
   position: relative;
   z-index: 1;
@@ -515,7 +515,7 @@ body {
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .container .wrapper-section .about .card .image {
     width: 66%;
-    height: 400px;
+    height: auto;
     margin: auto;
   }
 }
@@ -1557,6 +1557,7 @@ body {
   padding: 2em 5em;
   text-transform: capitalize;
   background: #252425;
+  position: relative;
 }
 @media screen and (max-width: 575px) {
   .container .footer {
@@ -1611,4 +1612,31 @@ body {
 }
 .container .footer .copyright span a {
   color: #ff6913;
+}
+.container .footer .btn-back-to-top {
+  width: max-content;
+  padding: 0.75em 1em;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw - 1rem, 1rem);
+  border: 2px solid #ff6913;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #ff6913;
+  transition: all 0.3s ease-in-out;
+  width: 35px;
+  height: 45px;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 16px;
+  bottom: 128px;
+  z-index: 10;
+  display: none;
+}
+.container .footer .btn-back-to-top:hover {
+  color: #ff6913;
+  background: #1b191b;
 }

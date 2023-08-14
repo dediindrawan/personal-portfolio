@@ -378,7 +378,7 @@
         // ========== image ========== //
         .image {
           width: 40%;
-          height: 535px;
+          height: 530px;
           box-shadow: 0 0 0 7px $primary, 0 0 4px 8px rgba($color: $dark, $alpha: 0.4);
           position: relative;
           z-index: 1;
@@ -391,7 +391,7 @@
           // ========== breakpoint min width on 576px and max width 767px ========== //
           @include breakpoint-screen-tablet {
             width: 66%;
-            height: 400px;
+            height: auto;
             margin: auto;
           }
           // ========== breakpoint min device width on 480px and max device width 1024px ========== //
@@ -1419,6 +1419,7 @@
     padding: 2em 5em;
     text-transform: capitalize;
     background: $secondary;
+    position: relative;
     // ========== breakpoint max width on 575px ========== //
     @include breakpoint-screen-mobile {
       padding: 2em 1em;
@@ -1481,6 +1482,20 @@
           color: $warning;
         }
       }
+    }
+    .btn-back-to-top {
+      @include myButton;
+      width: 35px;
+      height: 45px;
+      font-size: 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: 16px;
+      bottom: 128px;
+      z-index: 10;
+      display: none;
     }
   }
   // ========== footer end ========== //
