@@ -1614,29 +1614,19 @@ body {
   color: #ff6913;
 }
 .container .footer .btn-back-to-top {
-  width: max-content;
-  padding: 0.75em 1em;
-  font-family: inherit;
-  cursor: pointer;
-  font-size: clamp(1rem, 4vw - 1rem, 1rem);
-  border: 2px solid #ff6913;
-  border-radius: 10px;
-  color: #ffffff;
-  background: #ff6913;
-  transition: all 0.3s ease-in-out;
-  width: 35px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #ff6913;
+  background: linear-gradient(to top right, #1b191b 5%, #ff6913);
   position: fixed;
   right: 16px;
   bottom: 128px;
   z-index: 10;
   display: none;
-}
-.container .footer .btn-back-to-top:hover {
-  color: #ff6913;
-  background: #1b191b;
 }
