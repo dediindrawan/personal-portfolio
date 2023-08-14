@@ -111,7 +111,7 @@
                     </li>
                 </ul>
                 <!-- form group -->
-                <form action="https://instagram.com/dediindra_one/" method="get" class="form-group">
+                <form class="form-group" onsubmit="sendEmail(); reset(); return false">
                     <!-- wrapper -->
                     <div class="wrapper">
                         <div class="input-section">
@@ -130,7 +130,8 @@
                     <!-- input section -->
                     <div class="input-section">
                         <div class="wrapper-subject-input">
-                            <input type="text" class="subject-input" name="subject" id="subject" placeholder="Subject">
+                            <input type="text" class="subject-input" name="subject" id="subject"
+                                placeholder="Subject *">
                             <small class="error-message">error message</small>
                         </div>
                     </div>
@@ -187,6 +188,8 @@
     </div>
     <!-- container end -->
 
+    <!-- cdn smtp email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- connecting to javascript file -->
     <script src="public/javascript/script.js"></script>
     <!-- connecting to package data -->

@@ -92,7 +92,7 @@
                     </li>
                 </ul>
                 <!-- form group -->
-                <form action="" class="form-group">
+                <form class="form-group" onsubmit="sendEmail(); reset(); return false">
                     <!-- wrapper -->
                     <div class="wrapper">
                         <div class="input-section">
@@ -167,6 +167,8 @@
     </div>
     <!-- container end -->
 
+    <!-- cdn smtp email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- connecting to javascript file -->
     <script src="public/javascript/script.js"></script>
     <!-- connecting to package data -->

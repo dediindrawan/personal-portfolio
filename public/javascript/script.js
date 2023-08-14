@@ -89,58 +89,19 @@ window.addEventListener('scroll', () => {
     };
 });
 
-// create authorization contact form
-const formGroup = document.querySelector('.form-group');
-const nameInput = document.querySelector('.name-input');
-const subjectInput = document.querySelector('.email-input');
-const messageInput = document.querySelector('.message-input');
-
-formGroup.addEventListener('submit', (event) => {
-    validateForm();
-
-    if (isFormValid() == true) {
-        formGroup.submit();
-
-        // createUserMessage();
-    } else {
-        event.preventDefault();
-    };
-});
-
-// function isFormValid() {
-//     const inputSection = document.querySelectorAll('.input-section');
-//     let result = true;
-
-//     inputSection.forEach((section) => {
-//         if (section.classList.contains('error')) {
-//             result = false;
-//         };
-//     });
-//     return result;
-// };
-
-// function validateForm() {
-//     if (nameInput.value.trim() == '') {
-//         setError(nameInput, 'Name cannot be empty');
-//     } else {
-//         setSuccess(nameInput);
-//     };
-// };
-
-// function setError(element, errorMessage) {
-//     const parent = element.parentElement;
-//     parent.classList.add('error');
-//     if (parent.classList.contains('success')) {
-//         parent.classList.remove('success');
-//     };
-//     const small = parent.querySelector('small');
-//     small.textContent = errorMessage;
-// };
-
-// function setSuccess(element) {
-//     const parent = element.parentElement;
-//     if (parent.classList.contains('error')) {
-//         parent.classList.remove('error');
-//     };
-//     parent.classList.add('success');
-// };
+function sendEmail() {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "contactform.dediindrawan@gmail.com",
+        Password: "C1EA1A3AFC5227CBEEF3D47385DE333EF6BF",
+        To: 'contactform.dediindrawan@gmail.com',
+        From: document.querySelector('.email-input').value,
+        Subject: "New Message From Contact Form Portfolio",
+        Body: "Name: " + document.querySelector('.name-input').value + "\n"
+            + "Email: " + document.querySelector('.email-input').value + "\n"
+            + "Subject: " + document.querySelector('.subject-input').value + "\n"
+            + "Message: " + document.querySelector('.message-input').value
+    }).then(
+        message => alert("Message Sent Successfully")
+    );
+}
