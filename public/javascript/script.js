@@ -89,19 +89,27 @@ window.addEventListener('scroll', () => {
     };
 });
 
-function sendEmail() {
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "contactform.dediindrawan@gmail.com",
-        Password: "C1EA1A3AFC5227CBEEF3D47385DE333EF6BF",
-        To: 'contactform.dediindrawan@gmail.com',
-        From: document.querySelector('.email-input').value,
-        Subject: "New Message From Contact Form Portfolio",
-        Body: "Name: " + document.querySelector('.name-input').value + "\n"
-            + "Email: " + document.querySelector('.email-input').value + "\n"
-            + "Subject: " + document.querySelector('.subject-input').value + "\n"
-            + "Message: " + document.querySelector('.message-input').value
-    }).then(
-        message => alert("Message Sent Successfully")
-    );
-}
+// set contact form to auto sending message from web to email
+function sendEmail(event) {
+    event.preventDefault();
+    let params = {
+        name: document.querySelector('.name-input').value,
+        email: document.querySelector('.email-input').value,
+        subject: document.querySelector('.subject-input').value,
+        message: document.querySelector('.message-input').value,
+    };
+
+    const serviceId = "service_hhanyka";
+    const templateId = "template_tuvl81v";
+
+    emailjs.send(serviceId, templateId, params)
+        .then(res => {
+            document.querySelector('.name-input').value = '';
+            document.querySelector('.email-input').value = '';
+            document.querySelector('.subject-input').value = '';
+            document.querySelector('.message-input').value = '';
+            console.log(res);
+            alert('Your message sent sucessfully');
+        }).catch(err => console.log(err));
+};
+

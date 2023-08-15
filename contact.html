@@ -92,7 +92,7 @@
                     </li>
                 </ul>
                 <!-- form group -->
-                <form class="form-group" onsubmit="sendEmail(); reset(); return false">
+                <form class="form-group" onsubmit="sendEmail(event)">
                     <!-- wrapper -->
                     <div class="wrapper">
                         <div class="input-section">
@@ -167,8 +167,13 @@
     </div>
     <!-- container end -->
 
-    <!-- cdn smtp email -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- import cdn email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("v6b__ECNTuRDkCpAD");
+        })();
+    </script>
     <!-- connecting to javascript file -->
     <script src="public/javascript/script.js"></script>
     <!-- connecting to package data -->
