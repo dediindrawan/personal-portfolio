@@ -1553,6 +1553,21 @@ body {
   border: 1px solid #ff6913;
   display: none;
 }
+.container .wrapper-section .contact .form-group .popup-success {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #ff6913;
+  background: linear-gradient(to top right, #1b191b 5%, #ff6913);
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
 .container .footer {
   padding: 2em 5em;
   text-transform: capitalize;

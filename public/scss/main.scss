@@ -1408,6 +1408,22 @@
           border: 1px solid $warning;
           display: none;
         }
+        // ========== popup success ========== //
+        .popup-success {
+          height: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          border: 2px solid $warning;
+          background: $gradient-warning;
+          position: fixed;
+          top: 0px;
+          right: 0;
+          left: 0;
+          z-index: 10;
+          display: none;
+        }
       }
     }
     // ========== contact end ========== //

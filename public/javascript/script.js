@@ -109,7 +109,18 @@ function sendEmail(event) {
             document.querySelector('.subject-input').value = '';
             document.querySelector('.message-input').value = '';
             console.log(res);
-            alert('Your message sent sucessfully');
+
+            // show popup notification process sending 
+            let popupSuccess = document.querySelector('.popup-success');
+            setTimeout(function () {
+                popupSuccess.style.display = 'flex';
+                popupSuccess.textContent = 'Sending message';
+                setInterval(function () {
+                    popupSuccess.textContent = 'Your message sent successfully';
+                }, 2500);
+                setInterval(function () {
+                    popupSuccess.style.display = 'none';
+                }, 5000);
+            }, 100);
         }).catch(err => console.log(err));
 };
-

@@ -111,7 +111,7 @@
                     </li>
                 </ul>
                 <!-- form group -->
-                <form class="form-group" onsubmit="sendEmail()">
+                <form class="form-group" onsubmit="sendEmail(event)">
                     <!-- wrapper -->
                     <div class="wrapper">
                         <div class="input-section">
@@ -146,6 +146,7 @@
                     <button type="submit" class="btn-contact">send message</button>
                     <!-- popup error -->
                     <div class="popup-error">One or more fields have an error. Please check and try again.</div>
+                    <div class="popup-success"></div>
                 </form>
             </section>
             <!-- contact end -->
