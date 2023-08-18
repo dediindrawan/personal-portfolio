@@ -89,14 +89,86 @@ window.addEventListener('scroll', () => {
     };
 });
 
+const form = document.querySelector('.form-group');
+const nameInput = document.querySelector('.name-input');
+const emailInput = document.querySelector('.email-input');
+const subjectInput = document.querySelector('.subject-input');
+const messageInput = document.querySelector('.message-input');
+const popupError = document.querySelector('.popup-error');
+
+form.addEventListener('submit', (e) => {
+    checkingField();
+    e.preventDefault();
+});
+
+function checkingField() {
+    if (nameInput.value.trim() == '' && emailInput.value.trim() == '' && subjectInput.value.trim() == '' && messageInput.value.trim() == '') {
+        popupError.style.display = 'block';
+    } else {
+        popupError.style.display = 'none';
+        validateForm();
+    };
+};
+
+function validateForm() {
+    let result = true;
+    let nameErrMessage = nameInput.nextElementSibling;
+    if (nameInput.value.trim() == '') {
+        nameErrMessage.style.display = 'block';
+        nameErrMessage.innerHTML = 'Name cannot be empty';
+        result = false;
+    } else if (nameInput.value.trim().length < 3) {
+        nameErrMessage.style.display = 'block';
+        nameErrMessage.innerHTML = 'Name at least have 3 minimum characters';
+        result = false;
+    } else {
+        nameErrMessage.style.display = 'none';
+    };
+
+    let emailErrMessage = emailInput.nextElementSibling;
+    if (emailInput.value.trim() == '') {
+        emailErrMessage.style.display = 'block';
+        emailErrMessage.innerHTML = 'Email cannot be empty';
+        result = false;
+    } else if (!isEmailValid(emailInput.value.trim())) {
+        emailErrMessage.style.display = 'block';
+        emailErrMessage.innerHTML = 'Invalid email format';
+        result = false;
+    } else {
+        emailErrMessage.style.display = 'none';
+    };
+
+    let messageErrMessage = messageInput.nextElementSibling;
+    if (messageInput.value.trim() == '') {
+        messageErrMessage.style.display = 'block';
+        messageErrMessage.innerHTML = 'Message cannot be empty';
+        result = false;
+    } else if (messageInput.value.trim().length < 3) {
+        messageErrMessage.style.display = 'block';
+        messageErrMessage.innerHTML = 'Message at least have 3 minimum characters';
+        result = false;
+    } else {
+        messageErrMessage.style.display = 'none';
+    };
+
+    if (result) {
+        sendEmail();
+    };
+};
+
+function isEmailValid(emailInput) {
+    const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return reg.test(emailInput);
+};
+
 // set contact form to auto sending message from web to email
-function sendEmail(event) {
-    event.preventDefault();
+function sendEmail() {
     let params = {
-        name: document.querySelector('.name-input').value,
-        email: document.querySelector('.email-input').value,
-        subject: document.querySelector('.subject-input').value,
-        message: document.querySelector('.message-input').value,
+        name: nameInput.value,
+        email: emailInput.value,
+        subject: subjectInput.value,
+        message: messageInput.value,
     };
 
     const serviceId = "service_hhanyka";
@@ -104,23 +176,21 @@ function sendEmail(event) {
 
     emailjs.send(serviceId, templateId, params)
         .then(res => {
-            document.querySelector('.name-input').value = '';
-            document.querySelector('.email-input').value = '';
-            document.querySelector('.subject-input').value = '';
-            document.querySelector('.message-input').value = '';
+            nameInput.value = '';
+            emailInput.value = '';
+            subjectInput.value = '';
+            messageInput.value = '';
             console.log(res);
 
-            // show popup notification process sending 
+            // show popup notification process sending
             let popupSuccess = document.querySelector('.popup-success');
-            setTimeout(function () {
-                popupSuccess.style.display = 'flex';
-                popupSuccess.textContent = 'Sending message';
-                setInterval(function () {
-                    popupSuccess.textContent = 'Your message sent successfully';
-                }, 2500);
-                setInterval(function () {
-                    popupSuccess.style.display = 'none';
-                }, 5000);
-            }, 100);
+
+            popupSuccess.style.display = 'flex';
+            setInterval(function () {
+                popupSuccess.textContent = 'Your message sent successfully';
+            }, 2500);
+            setInterval(function () {
+                popupSuccess.style.display = 'none';
+            }, 5000);
         }).catch(err => console.log(err));
 };

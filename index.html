@@ -111,7 +111,7 @@
                     </li>
                 </ul>
                 <!-- form group -->
-                <form class="form-group" onsubmit="sendEmail(event)">
+                <form class="form-group">
                     <!-- wrapper -->
                     <div class="wrapper">
                         <div class="input-section">
@@ -131,7 +131,7 @@
                     <div class="input-section">
                         <div class="wrapper-subject-input">
                             <input type="text" class="subject-input" name="subject" id="subject"
-                                placeholder="Subject *">
+                                placeholder="Subject (optional)">
                             <small class="error-message">error message</small>
                         </div>
                     </div>
@@ -145,8 +145,9 @@
                     </div>
                     <button type="submit" class="btn-contact">send message</button>
                     <!-- popup error -->
-                    <div class="popup-error">One or more fields have an error. Please check and try again.</div>
-                    <div class="popup-success"></div>
+                    <div class="popup-error">You haven't filled anything in the provided contact form. Please complete
+                        it and try again.</div>
+                    <div class="popup-success">Sending message</div>
                 </form>
             </section>
             <!-- contact end -->
