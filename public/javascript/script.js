@@ -89,6 +89,7 @@ window.addEventListener('scroll', () => {
     };
 });
 
+// set form handling
 const form = document.querySelector('.form-group');
 const nameInput = document.querySelector('.name-input');
 const emailInput = document.querySelector('.email-input');
@@ -96,11 +97,13 @@ const subjectInput = document.querySelector('.subject-input');
 const messageInput = document.querySelector('.message-input');
 const popupError = document.querySelector('.popup-error');
 
+// form executed
 form.addEventListener('submit', (e) => {
     checkingField();
     e.preventDefault();
 });
 
+// checking field executed
 function checkingField() {
     if (nameInput.value.trim() == '' && emailInput.value.trim() == '' && subjectInput.value.trim() == '' && messageInput.value.trim() == '') {
         popupError.style.display = 'block';
@@ -110,8 +113,11 @@ function checkingField() {
     };
 };
 
+// validate form executed
 function validateForm() {
     let result = true;
+
+    // name input
     let nameErrMessage = nameInput.nextElementSibling;
     if (nameInput.value.trim() == '') {
         nameErrMessage.style.display = 'block';
@@ -125,6 +131,7 @@ function validateForm() {
         nameErrMessage.style.display = 'none';
     };
 
+    // email input
     let emailErrMessage = emailInput.nextElementSibling;
     if (emailInput.value.trim() == '') {
         emailErrMessage.style.display = 'block';
@@ -138,6 +145,7 @@ function validateForm() {
         emailErrMessage.style.display = 'none';
     };
 
+    // message input
     let messageErrMessage = messageInput.nextElementSibling;
     if (messageInput.value.trim() == '') {
         messageErrMessage.style.display = 'block';
@@ -156,13 +164,14 @@ function validateForm() {
     };
 };
 
+// regular expression for validation of email input
 function isEmailValid(emailInput) {
     const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return reg.test(emailInput);
 };
 
-// set contact form to auto sending message from web to email
+// send email executed
 function sendEmail() {
     let params = {
         name: nameInput.value,
@@ -184,8 +193,9 @@ function sendEmail() {
 
             // show popup notification process sending
             let popupSuccess = document.querySelector('.popup-success');
-
             popupSuccess.style.display = 'flex';
+
+            // show popup in interval's time
             setInterval(function () {
                 popupSuccess.textContent = 'Your message sent successfully';
             }, 2500);
