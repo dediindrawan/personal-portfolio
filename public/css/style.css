@@ -1505,12 +1505,10 @@ body {
 }
 .container .wrapper-section .contact .form-group .wrapper .input-section .wrapper-name-input .error-message {
   padding-left: 1em;
-  text-transform: capitalize;
   color: #ff6913;
 }
 .container .wrapper-section .contact .form-group .wrapper .input-section .wrapper-email-input .error-message {
   padding-left: 1em;
-  text-transform: capitalize;
   color: #ff6913;
 }
 .container .wrapper-section .contact .form-group .input-section {
@@ -1518,12 +1516,10 @@ body {
 }
 .container .wrapper-section .contact .form-group .input-section .wrapper-subject-input .error-message {
   padding-left: 1em;
-  text-transform: capitalize;
   color: #ff6913;
 }
 .container .wrapper-section .contact .form-group .input-section .wrapper-message-input .error-message {
   padding-left: 1em;
-  text-transform: capitalize;
   color: #ff6913;
 }
 .container .wrapper-section .contact .form-group .btn-contact {
