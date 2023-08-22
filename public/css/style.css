@@ -145,7 +145,7 @@ body {
   top: 70px;
   z-index: -1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar {
     padding: 0;
     flex-direction: column;
@@ -155,7 +155,7 @@ body {
     background: #1b191b;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar {
     padding: 0;
     flex-direction: column;
@@ -163,6 +163,11 @@ body {
     align-items: start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background: #1b191b;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .wrapper-navbar {
+    padding: 0 1em;
   }
 }
 .container .wrapper-navbar .brand {
@@ -170,7 +175,7 @@ body {
   align-items: center;
   gap: 0.5em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar .brand {
     width: 100%;
     min-height: 70px;
@@ -179,7 +184,7 @@ body {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar .brand {
     width: 100%;
     max-width: 576px;
@@ -188,12 +193,6 @@ body {
     padding: 0 2em;
     align-items: center;
     justify-content: space-between;
-  }
-}
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .container .wrapper-navbar .brand {
-    width: 100%;
-    max-width: 100%;
   }
 }
 .container .wrapper-navbar .brand a h3 {
@@ -218,7 +217,7 @@ body {
   background: linear-gradient(to top right, #1b191b 5%, #ff6913);
   display: none;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar .brand .toggle-menu {
     display: flex;
     justify-content: center;
@@ -229,7 +228,7 @@ body {
     display: none;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar .brand .toggle-menu {
     display: flex;
     justify-content: center;
@@ -246,7 +245,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar .nav-link {
     width: 70%;
     min-height: 100vh;
@@ -257,7 +256,7 @@ body {
     background: #1b191b;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar .nav-link {
     width: 50%;
     min-height: 100vh;
@@ -268,13 +267,13 @@ body {
     background: #1b191b;
   }
 }
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-navbar .nav-link {
-    overflow-y: auto;
-    padding-bottom: 4em;
+    width: 75%;
+    max-width: 466px;
   }
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar .nav-link li {
     width: 100%;
     padding: 1em 0;
@@ -282,7 +281,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar .nav-link li {
     width: 100%;
     padding: 1em 0;
@@ -301,12 +300,12 @@ body {
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-navbar .nav-link li a::after {
     width: 0;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-navbar .nav-link li a::after {
     width: 0;
   }
@@ -331,18 +330,23 @@ body {
   background-size: cover;
   position: relative;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .hero {
     padding: 0 1em;
     background-position-y: 70px;
     background-position-x: 75%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero {
     padding: 0;
     background-position-y: 70px;
     background-position-x: 75%;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .hero {
+    padding: 0 1em;
   }
 }
 .container .hero::after {
@@ -365,30 +369,29 @@ body {
   position: relative;
   z-index: 1;
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero .wrapper {
     width: 576px;
     margin: auto;
     padding: 0 2em;
   }
 }
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .container .hero .wrapper {
-    width: 100%;
-    max-width: 100%;
-  }
-}
 .container .hero .wrapper .heading {
   padding-bottom: 1em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .hero .wrapper .heading {
     padding-top: 12em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero .wrapper .heading {
     padding-top: 12em;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .hero .wrapper .heading {
+    padding-top: 5em;
   }
 }
 .container .hero .wrapper .title {
@@ -403,19 +406,14 @@ body {
   position: inherit;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .hero .wrapper .title {
     line-height: 1.25;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero .wrapper .title {
     line-height: 1.25;
-  }
-}
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .container .hero .wrapper .title {
-    padding-top: 1em;
   }
 }
 .container .hero .wrapper .btn-hero {
@@ -462,22 +460,22 @@ body {
   width: 100%;
   padding: 3em 5em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section {
     padding: 0 1em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section {
     width: 576px;
     margin: auto;
     padding: 0 2em;
   }
 }
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section {
     width: 100%;
-    max-width: 100%;
+    padding: 0 1em;
   }
 }
 .container .wrapper-section .about {
@@ -488,12 +486,17 @@ body {
   justify-content: space-between;
   gap: 3em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .card {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .about .card {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card {
     flex-direction: column;
   }
@@ -505,24 +508,25 @@ body {
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .card .image {
     width: 96%;
     height: auto;
     margin: auto;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .card .image {
     width: 66%;
     height: auto;
     margin: auto;
   }
 }
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card .image {
     width: 66%;
     height: auto;
+    margin: auto;
   }
 }
 .container .wrapper-section .about .card .image::after {
@@ -531,8 +535,8 @@ body {
   width: 95%;
   height: 95%;
   position: absolute;
-  right: -0.5em;
-  bottom: -0.5em;
+  right: -0.4em;
+  bottom: -0.4em;
   background-color: #252425;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
 }
@@ -553,12 +557,17 @@ body {
 .container .wrapper-section .about .card .caption {
   width: 60%;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .about .card .caption {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
@@ -580,12 +589,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .card .caption .title::after {
     left: 81.4%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .card .caption .title::after {
     left: 81.4%;
   }
@@ -641,12 +650,12 @@ body {
   margin-left: 1em;
   list-style-type: disc;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .card .caption .bio li {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .card .caption .bio li {
     width: 100%;
   }
@@ -681,12 +690,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .skills .title::after {
     left: 80%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .skills .title::after {
     left: 80%;
   }
@@ -716,12 +725,12 @@ body {
   border-radius: 10px;
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .skills .card {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .skills .card {
     flex-direction: column;
   }
@@ -729,12 +738,12 @@ body {
 .container .wrapper-section .about .skills .card .list {
   width: 100%;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .skills .card .list {
     width: 100%;
   }
@@ -755,12 +764,12 @@ body {
   flex-wrap: wrap;
   row-gap: 0.5em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list .progress {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .skills .card .list .progress {
     flex-direction: column;
   }
@@ -770,12 +779,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list .progress li {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .about .skills .card .list .progress li {
     width: 100%;
   }
@@ -816,12 +825,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .services .title::after {
     left: 82.5%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .services .title::after {
     left: 82.5%;
   }
@@ -845,10 +854,11 @@ body {
 .container .wrapper-section .services .card {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2em;
 }
 .container .wrapper-section .services .card li {
-  width: 31.5%;
+  max-width: calc(33.33% - 2em);
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -863,14 +873,19 @@ body {
 .container .wrapper-section .services .card li:hover {
   transform: translateY(-0.5em);
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .services .card li {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .services .card li {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .wrapper-section .services .card li {
+    max-width: calc(50% - 1em);
   }
 }
 .container .wrapper-section .services .card li i {
@@ -878,10 +893,16 @@ body {
   color: #ff6913;
 }
 .container .wrapper-section .services .card li .subtitle {
+  font-weight: 600;
   text-transform: uppercase;
 }
 .container .wrapper-section .resume {
   padding-top: 5em;
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .wrapper-section .resume {
+    background-color: aqua;
+  }
 }
 .container .wrapper-section .resume .title {
   width: max-content;
@@ -901,12 +922,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .title::after {
     left: 81%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .title::after {
     left: 81%;
   }
@@ -937,22 +958,22 @@ body {
   display: grid;
   place-items: end;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
     padding-top: 2.5em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
     padding-top: 2.5em;
   }
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
     top: -2.4em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
     top: -2.4em;
   }
@@ -967,14 +988,14 @@ body {
   left: -3em;
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:last-child .experience:last-child::after {
     top: -3em;
     left: calc(50% - 5px);
     z-index: -1;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:last-child .experience:last-child::after {
     top: -3em;
     left: calc(50% - 5px);
@@ -984,12 +1005,12 @@ body {
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
   place-items: start;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
     padding-top: 3em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
     padding-top: 3em;
   }
@@ -1003,12 +1024,12 @@ body {
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
     width: 100%;
   }
@@ -1026,16 +1047,21 @@ body {
   background: #ff6913;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
     top: -2.5em;
     right: calc(50% - 0.4em);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
     top: -2.5em;
     right: calc(50% - 0.4em);
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
+    background: blueviolet;
   }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
@@ -1048,14 +1074,14 @@ body {
   right: -3em;
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
     top: -3em;
     right: 50%;
     z-index: -1;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
     top: -3em;
     right: 50%;
@@ -1089,24 +1115,24 @@ body {
   transform: rotate(45deg);
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle::after {
     top: -6.25em;
     right: calc(50% - 0.465em);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle::after {
     top: -6.25em;
     right: calc(50% - 0.465em);
   }
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
     padding-top: 3em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
     padding-top: 3em;
   }
@@ -1120,12 +1146,12 @@ body {
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
     width: 100%;
   }
@@ -1143,13 +1169,13 @@ body {
   background: #ff6913;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::before {
     top: -2.5em;
     left: calc(50% - 0.66em);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::before {
     top: -2.5em;
     left: calc(50% - 0.66em);
@@ -1165,14 +1191,14 @@ body {
   left: -3em;
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
     top: -3em;
     left: calc(50% - 5px);
     z-index: -1;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
     top: -3em;
     left: calc(50% - 5px);
@@ -1206,13 +1232,13 @@ body {
   transform: rotate(45deg);
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
     top: -6.25em;
     left: calc(50% - 0.765em);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
     top: -6.25em;
     left: calc(50% - 0.765em);
@@ -1239,12 +1265,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .portfolio .title::after {
     left: 83.3%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .portfolio .title::after {
     left: 83.3%;
   }
@@ -1272,25 +1298,25 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .portfolio .card li {
-  width: 31.5%;
+  max-width: calc(33.33% - 2em);
   height: auto;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .portfolio .card li {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .portfolio .card li {
     width: 100%;
   }
 }
-@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .portfolio .card li {
-    width: 46.4%;
+    max-width: calc(50% - 1em);
   }
 }
 .container .wrapper-section .portfolio .card li a {
@@ -1363,12 +1389,12 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .contact .title::after {
     left: 82.8%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .title::after {
     left: 82.8%;
   }
@@ -1396,7 +1422,7 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .contact .card li {
-  width: 31.5%;
+  max-width: calc(33.33% - 2em);
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -1406,14 +1432,23 @@ body {
   border-radius: 10px;
   background: #252425;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .contact .card li {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .card li {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .container .wrapper-section .contact .card li {
+    flex: 1;
+    max-width: 100%;
+  }
+  .container .wrapper-section .contact .card li:nth-child(2) {
+    order: 3;
   }
 }
 .container .wrapper-section .contact .card li i {
@@ -1480,12 +1515,12 @@ body {
   justify-content: space-between;
   gap: 2em;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .contact .form-group .wrapper {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .form-group .wrapper {
     flex-direction: column;
   }
@@ -1493,12 +1528,12 @@ body {
 .container .wrapper-section .contact .form-group .wrapper .input-section {
   width: 50%;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .wrapper-section .contact .form-group .wrapper .input-section {
     width: 100%;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .form-group .wrapper .input-section {
     width: 100%;
   }
@@ -1570,12 +1605,12 @@ body {
   background: #252425;
   position: relative;
 }
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .container .footer {
     padding: 2em 1em;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .footer {
     padding: 2em;
   }

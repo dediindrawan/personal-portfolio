@@ -31,7 +31,7 @@
       }
     }
     // ========== breakpoint max width on 575px ========== //
-    @include breakpoint-screen-mobile {
+    @include small-smartphone {
       padding: 0;
       flex-direction: column;
       justify-content: start;
@@ -40,7 +40,7 @@
       background: $primary;
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
-    @include breakpoint-screen-tablet {
+    @include medium-smartphone {
       padding: 0;
       flex-direction: column;
       justify-content: start;
@@ -48,13 +48,17 @@
       border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
       background: $primary;
     }
+    // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+    @include smartphone-landscape {
+      padding: $px-1;
+    }
     // ========== brand ========== //
     .brand {
       display: flex;
       align-items: center;
       gap: $gap-thin;
       // ========== breakpoint max width on 575px ========== //
-      @include breakpoint-screen-mobile {
+      @include small-smartphone {
         width: $full;
         min-height: 70px;
         padding: $px-1;
@@ -62,7 +66,7 @@
         justify-content: space-between;
       }
       // ========== breakpoint min width on 576px and max width 767px ========== //
-      @include breakpoint-screen-tablet {
+      @include medium-smartphone {
         width: $full;
         max-width: calc(767px - 191px);
         min-height: 70px;
@@ -70,11 +74,6 @@
         padding: $px-2;
         align-items: center;
         justify-content: space-between;
-      }
-      // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-      @include breakpoint-screen-mobile-tablet-landscape {
-        width: $full;
-        max-width: $full;
       }
       a {
         h3 {
@@ -101,7 +100,7 @@
         background: $gradient-warning;
         display: none;
         // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
+        @include small-smartphone {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -111,7 +110,7 @@
           }
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
+        @include medium-smartphone {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -129,7 +128,7 @@
       justify-content: space-between;
       align-items: center;
       // ========== breakpoint max width on 575px ========== //
-      @include breakpoint-screen-mobile {
+      @include small-smartphone {
         width: 70%;
         min-height: $y-screen;
         flex-direction: column;
@@ -139,7 +138,7 @@
         background: $primary;
       }
       // ========== breakpoint min width on 576px and max width 767px ========== //
-      @include breakpoint-screen-tablet {
+      @include medium-smartphone {
         width: $half;
         min-height: $y-screen;
         flex-direction: column;
@@ -148,21 +147,21 @@
         transition: transform $transition;
         background: $primary;
       }
-      // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-      @include breakpoint-screen-mobile-tablet-landscape {
-        overflow-y: auto;
-        padding-bottom: $pb-4;
+      // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+      @include smartphone-landscape {
+        width: 75%;
+        max-width: calc(767px - 301px);
       }
       li {
         // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
+        @include small-smartphone {
           width: $full;
           padding: $py-1;
           padding-left: $pl-1;
           border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
+        @include medium-smartphone {
           width: $full;
           padding: $py-1;
           padding-left: $pl-2;
@@ -178,11 +177,11 @@
             transform: scale(0);
             transition: transform $transition;
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               width: 0;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               width: 0;
             }
           }
@@ -219,16 +218,20 @@
     background-size: cover;
     position: relative;
     // ========== breakpoint max width on 575px ========== //
-    @include breakpoint-screen-mobile {
+    @include small-smartphone {
       padding: $px-1;
       background-position-y: 70px;
       background-position-x: 75%;
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
-    @include breakpoint-screen-tablet {
+    @include medium-smartphone {
       padding: 0;
       background-position-y: 70px;
       background-position-x: 75%;
+    }
+    // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+    @include smartphone-landscape {
+      padding: $px-1;
     }
     &::after {
       content: '';
@@ -251,29 +254,25 @@
       position: relative;
       z-index: 1;
       // ========== breakpoint min width on 576px and max width 767px ========== //
-      @include breakpoint-screen-tablet {
+      @include medium-smartphone {
         width: calc(767px - 191px);
         margin: auto;
         padding: $px-2;
-      }
-      // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-      @include breakpoint-screen-mobile-tablet-landscape {
-        width: $full;
-        max-width: $full;
       }
       // ========== title ========== //
       .heading {
         padding-bottom: $pb-1;
         // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
+        @include small-smartphone {
           padding-top: 12em;
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
+        @include medium-smartphone {
           padding-top: 12em;
         }
-        // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-        @include breakpoint-screen-mobile-tablet-landscape {
+        // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+        @include smartphone-landscape {
+          padding-top: $pt-5;
         }
       }
       // ========== title ========== //
@@ -289,16 +288,12 @@
         position: inherit;
         z-index: 1;
         // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
+        @include small-smartphone {
           line-height: 1.25;
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
+        @include medium-smartphone {
           line-height: 1.25;
-        }
-        // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-        @include breakpoint-screen-mobile-tablet-landscape {
-          padding-top: $pt-1;
         }
       }
       // ========== btn hero ========== //
@@ -345,19 +340,19 @@
     width: $full;
     padding: 3em 5em;
     // ========== breakpoint max width on 575px ========== //
-    @include breakpoint-screen-mobile {
+    @include small-smartphone {
       padding: $px-1;
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
-    @include breakpoint-screen-tablet {
+    @include medium-smartphone {
       width: calc(767px - 191px);
       margin: auto;
       padding: $px-2;
     }
-    // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-    @include breakpoint-screen-mobile-tablet-landscape {
+    // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+    @include smartphone-landscape {
       width: $full;
-      max-width: $full;
+      padding: $px-1;
     }
     // ========== about start ========== //
     .about {
@@ -368,11 +363,15 @@
         justify-content: space-between;
         gap: $gap-3;
         // ========== breakpoint max width on 575px ========== //
-        @include breakpoint-screen-mobile {
+        @include small-smartphone {
           flex-direction: column;
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
-        @include breakpoint-screen-tablet {
+        @include medium-smartphone {
+          flex-direction: column;
+        }
+        // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+        @include smartphone-landscape {
           flex-direction: column;
         }
         // ========== image ========== //
@@ -383,21 +382,22 @@
           position: relative;
           z-index: 1;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             width: 96%;
             height: auto;
             margin: auto;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             width: 66%;
             height: auto;
             margin: auto;
           }
-          // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-          @include breakpoint-screen-mobile-tablet-landscape {
+          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+          @include smartphone-landscape {
             width: 66%;
             height: auto;
+            margin: auto;
           }
           &::after {
             content: '';
@@ -405,8 +405,8 @@
             width: 95%;
             height: 95%;
             position: absolute;
-            right: -0.5em;
-            bottom: -0.5em;
+            right: -0.4em;
+            bottom: -0.4em;
             background-color: $secondary;
             clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
           }
@@ -429,11 +429,15 @@
         .caption {
           width: 60%;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             width: $full;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
+            width: $full;
+          }
+          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+          @include smartphone-landscape {
             width: $full;
           }
           // ========== title ========== //
@@ -453,11 +457,11 @@
               border: 3px solid $tertiary;
               background: $warning;
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 left: 81.4%;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 left: 81.4%;
               }
             }
@@ -515,11 +519,11 @@
               margin-left: $ml-1;
               list-style-type: disc;
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 width: $full;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 width: $full;
               }
               span {
@@ -557,11 +561,11 @@
             border: 3px solid $tertiary;
             background: $warning;
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               left: 80%;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               left: 80%;
             }
           }
@@ -592,22 +596,22 @@
           border-radius: $rd-10;
           background: $secondary;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             flex-direction: column;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             flex-direction: column;
           }
           // ========== list ========== //
           .list {
             width: $full;
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               width: $full;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               width: $full;
             }
             .subtitle {
@@ -627,11 +631,11 @@
               flex-wrap: wrap;
               row-gap: $gap-thin;
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 flex-direction: column;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 flex-direction: column;
               }
               li {
@@ -639,11 +643,11 @@
                 display: flex;
                 flex-direction: column;
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   width: $full;
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   width: $full;
                 }
                 .chart {
@@ -690,11 +694,11 @@
           border: 3px solid $tertiary;
           background: $warning;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             left: 82.5%;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             left: 82.5%;
           }
         }
@@ -719,9 +723,10 @@
       .card {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: $gap-2;
         li {
-          width: 31.5%;
+          max-width: calc(33.33% - $gap-2);
           padding: $p-2;
           text-align: center;
           font-weight: $ft-light;
@@ -736,19 +741,23 @@
             transform: translateY(-0.5em);
           }
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             width: $full;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             width: $full;
+          }
+          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+          @include smartphone-landscape {
+            max-width: calc($half - $gap-1);
           }
           i {
             font-size: $ft-h2;
             color: $warning;
           }
           .subtitle {
-            // font-weight: $ft-s-bold;
+            font-weight: $ft-s-bold;
             text-transform: uppercase;
           }
         }
@@ -759,6 +768,10 @@
     // ========== resume start ========== //
     .resume {
       padding-top: $pt-5;
+      // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+      @include smartphone-landscape {
+        background-color: aqua;
+      }
       // ========== title ========== //
       .title {
         width: max-content;
@@ -777,11 +790,11 @@
           border: 3px solid $tertiary;
           background: $warning;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             left: 81%;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             left: 81%;
           }
         }
@@ -815,24 +828,24 @@
           &:first-child {
             &:nth-child(odd) {
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 padding-top: 2.5em;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 padding-top: 2.5em;
               }
             }
             .experience {
               &:first-child {
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   &::after {
                     top: -2.4em;
                   }
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   &::after {
                     top: -2.4em;
                   }
@@ -853,13 +866,13 @@
                   left: -3em;
                   background: $secondary;
                   // ========== breakpoint max width on 575px ========== //
-                  @include breakpoint-screen-mobile {
+                  @include small-smartphone {
                     top: -3em;
                     left: calc($half - 5px);
                     z-index: -1;
                   }
                   // ========== breakpoint min width on 576px and max width 767px ========== //
-                  @include breakpoint-screen-tablet {
+                  @include medium-smartphone {
                     top: -3em;
                     left: calc($half - 5px);
                     z-index: -1;
@@ -871,11 +884,11 @@
           &:nth-child(odd) {
             place-items: start;
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               padding-top: 3em;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               padding-top: 3em;
             }
             .experience {
@@ -887,11 +900,11 @@
               position: relative;
               z-index: 1;
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 width: $full;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 width: $full;
               }
               &::before {
@@ -907,14 +920,18 @@
                 background: $warning;
                 z-index: 1;
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   top: -2.5em;
                   right: calc($half - 0.4em);
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   top: -2.5em;
                   right: calc($half - 0.4em);
+                }
+                // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+                @include smartphone-landscape {
+                  background: blueviolet;
                 }
               }
               &::after {
@@ -927,13 +944,13 @@
                 right: -3em;
                 background: $secondary;
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   top: -3em;
                   right: $half;
                   z-index: -1;
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   top: -3em;
                   right: $half;
                   z-index: -1;
@@ -965,12 +982,12 @@
                   transform: rotate(45deg);
                   background: $secondary;
                   // ========== breakpoint max width on 575px ========== //
-                  @include breakpoint-screen-mobile {
+                  @include small-smartphone {
                     top: -6.25em;
                     right: calc($half - 0.465em);
                   }
                   // ========== breakpoint min width on 576px and max width 767px ========== //
-                  @include breakpoint-screen-tablet {
+                  @include medium-smartphone {
                     top: -6.25em;
                     right: calc($half - 0.465em);
                   }
@@ -980,11 +997,11 @@
           }
           &:nth-child(even) {
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               padding-top: 3em;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               padding-top: 3em;
             }
             .experience {
@@ -996,11 +1013,11 @@
               position: relative;
               z-index: 1;
               // ========== breakpoint max width on 575px ========== //
-              @include breakpoint-screen-mobile {
+              @include small-smartphone {
                 width: $full;
               }
               // ========== breakpoint min width on 576px and max width 767px ========== //
-              @include breakpoint-screen-tablet {
+              @include medium-smartphone {
                 width: $full;
               }
               &::before {
@@ -1016,12 +1033,12 @@
                 background: $warning;
                 z-index: 1;
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   top: -2.5em;
                   left: calc($half - 0.66em);
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   top: -2.5em;
                   left: calc($half - 0.66em);
                 }
@@ -1036,13 +1053,13 @@
                 left: -3em;
                 background: $secondary;
                 // ========== breakpoint max width on 575px ========== //
-                @include breakpoint-screen-mobile {
+                @include small-smartphone {
                   top: -3em;
                   left: calc($half - 5px);
                   z-index: -1;
                 }
                 // ========== breakpoint min width on 576px and max width 767px ========== //
-                @include breakpoint-screen-tablet {
+                @include medium-smartphone {
                   top: -3em;
                   left: calc($half - 5px);
                   z-index: -1;
@@ -1074,12 +1091,12 @@
                   transform: rotate(45deg);
                   background: $secondary;
                   // ========== breakpoint max width on 575px ========== //
-                  @include breakpoint-screen-mobile {
+                  @include small-smartphone {
                     top: -6.25em;
                     left: calc($half - 0.765em);
                   }
                   // ========== breakpoint min width on 576px and max width 767px ========== //
-                  @include breakpoint-screen-tablet {
+                  @include medium-smartphone {
                     top: -6.25em;
                     left: calc($half - 0.765em);
                   }
@@ -1113,11 +1130,11 @@
           border: 3px solid $tertiary;
           background: $warning;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             left: 83.3%;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             left: 83.3%;
           }
         }
@@ -1145,22 +1162,22 @@
         flex-wrap: wrap;
         gap: $gap-2;
         li {
-          width: 31.5%;
+          max-width: calc(33.33% - $gap-2);
           height: auto;
           border-radius: $rd-10;
           overflow: hidden;
           position: relative;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             width: $full;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             width: $full;
           }
-          // ========== breakpoint min device width on 480px and max device width 1024px ========== //
-          @include breakpoint-screen-mobile-tablet-landscape {
-            width: 46.4%;
+          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+          @include smartphone-landscape {
+            max-width: calc($half - $gap-1);
           }
           a {
             width: $full;
@@ -1239,11 +1256,11 @@
           border: 3px solid $tertiary;
           background: $warning;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             left: 82.8%;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             left: 82.8%;
           }
         }
@@ -1271,7 +1288,7 @@
         flex-wrap: wrap;
         gap: $gap-2;
         li {
-          width: 31.5%;
+          max-width: calc(33.33% - $gap-2);
           padding: $p-2;
           text-align: center;
           font-weight: $ft-light;
@@ -1281,12 +1298,20 @@
           border-radius: $rd-10;
           background: $secondary;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             width: $full;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             width: $full;
+          }
+          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
+          @include smartphone-landscape {
+            flex: 1;
+            max-width: $full;
+            &:nth-child(2) {
+              order: 3;
+            }
           }
           i {
             width: 50px;
@@ -1342,21 +1367,21 @@
           justify-content: space-between;
           gap: $gap-2;
           // ========== breakpoint max width on 575px ========== //
-          @include breakpoint-screen-mobile {
+          @include small-smartphone {
             flex-direction: column;
           }
           // ========== breakpoint min width on 576px and max width 767px ========== //
-          @include breakpoint-screen-tablet {
+          @include medium-smartphone {
             flex-direction: column;
           }
           .input-section {
             width: $half;
             // ========== breakpoint max width on 575px ========== //
-            @include breakpoint-screen-mobile {
+            @include small-smartphone {
               width: $full;
             }
             // ========== breakpoint min width on 576px and max width 767px ========== //
-            @include breakpoint-screen-tablet {
+            @include medium-smartphone {
               width: $full;
             }
             .wrapper-name-input {
@@ -1433,11 +1458,11 @@
     background: $secondary;
     position: relative;
     // ========== breakpoint max width on 575px ========== //
-    @include breakpoint-screen-mobile {
+    @include small-smartphone {
       padding: 2em 1em;
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
-    @include breakpoint-screen-tablet {
+    @include medium-smartphone {
       padding: $p-2;
     }
     // ========== brand ========== //
