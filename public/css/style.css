@@ -145,7 +145,7 @@ body {
   top: 70px;
   z-index: -1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar {
     padding: 0;
     flex-direction: column;
@@ -175,7 +175,7 @@ body {
   align-items: center;
   gap: 0.5em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar .brand {
     width: 100%;
     min-height: 70px;
@@ -217,7 +217,7 @@ body {
   background: linear-gradient(to top right, #1b191b 5%, #ff6913);
   display: none;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar .brand .toggle-menu {
     display: flex;
     justify-content: center;
@@ -245,7 +245,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar .nav-link {
     width: 70%;
     min-height: 100vh;
@@ -270,10 +270,11 @@ body {
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-navbar .nav-link {
     width: 75%;
-    max-width: 466px;
+    max-width: 576px;
+    background-color: aqua;
   }
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar .nav-link li {
     width: 100%;
     padding: 1em 0;
@@ -300,7 +301,7 @@ body {
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-navbar .nav-link li a::after {
     width: 0;
   }
@@ -330,7 +331,7 @@ body {
   background-size: cover;
   position: relative;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .hero {
     padding: 0 1em;
     background-position-y: 70px;
@@ -342,11 +343,6 @@ body {
     padding: 0;
     background-position-y: 70px;
     background-position-x: 75%;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .hero {
-    padding: 0 1em;
   }
 }
 .container .hero::after {
@@ -379,7 +375,7 @@ body {
 .container .hero .wrapper .heading {
   padding-bottom: 1em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .hero .wrapper .heading {
     padding-top: 12em;
   }
@@ -387,11 +383,6 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero .wrapper .heading {
     padding-top: 12em;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .hero .wrapper .heading {
-    padding-top: 5em;
   }
 }
 .container .hero .wrapper .title {
@@ -406,7 +397,7 @@ body {
   position: inherit;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .hero .wrapper .title {
     line-height: 1.25;
   }
@@ -460,7 +451,7 @@ body {
   width: 100%;
   padding: 3em 5em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section {
     padding: 0 1em;
   }
@@ -472,12 +463,6 @@ body {
     padding: 0 2em;
   }
 }
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section {
-    width: 100%;
-    padding: 0 1em;
-  }
-}
 .container .wrapper-section .about {
   padding-top: 5em;
 }
@@ -486,17 +471,12 @@ body {
   justify-content: space-between;
   gap: 3em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .card {
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
-  .container .wrapper-section .about .card {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card {
     flex-direction: column;
   }
@@ -508,7 +488,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .card .image {
     width: 96%;
     height: auto;
@@ -516,13 +496,6 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
-  .container .wrapper-section .about .card .image {
-    width: 66%;
-    height: auto;
-    margin: auto;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card .image {
     width: 66%;
     height: auto;
@@ -557,17 +530,12 @@ body {
 .container .wrapper-section .about .card .caption {
   width: 60%;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
-  .container .wrapper-section .about .card .caption {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
@@ -589,7 +557,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .card .caption .title::after {
     left: 81.4%;
   }
@@ -650,7 +618,7 @@ body {
   margin-left: 1em;
   list-style-type: disc;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .card .caption .bio li {
     width: 100%;
   }
@@ -690,7 +658,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .skills .title::after {
     left: 80%;
   }
@@ -725,7 +693,7 @@ body {
   border-radius: 10px;
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .skills .card {
     flex-direction: column;
   }
@@ -738,7 +706,7 @@ body {
 .container .wrapper-section .about .skills .card .list {
   width: 100%;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list {
     width: 100%;
   }
@@ -764,7 +732,7 @@ body {
   flex-wrap: wrap;
   row-gap: 0.5em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list .progress {
     flex-direction: column;
   }
@@ -779,7 +747,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .about .skills .card .list .progress li {
     width: 100%;
   }
@@ -825,7 +793,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .services .title::after {
     left: 82.5%;
   }
@@ -872,7 +840,7 @@ body {
 .container .wrapper-section .services .card li:hover {
   transform: translateY(-0.5em);
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .services .card li {
     width: 100%;
   }
@@ -910,7 +878,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .title::after {
     left: 81%;
   }
@@ -946,7 +914,7 @@ body {
   display: grid;
   place-items: end;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
     padding-top: 2.5em;
   }
@@ -956,7 +924,7 @@ body {
     padding-top: 2.5em;
   }
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
     top: -2.4em;
   }
@@ -976,7 +944,7 @@ body {
   left: -3em;
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:last-child .experience:last-child::after {
     top: -3em;
     left: calc(50% - 5px);
@@ -993,7 +961,7 @@ body {
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
   place-items: start;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
     padding-top: 3em;
   }
@@ -1012,7 +980,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
     width: 100%;
   }
@@ -1035,7 +1003,7 @@ body {
   background: #ff6913;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
     top: -2.5em;
     right: calc(50% - 0.4em);
@@ -1057,7 +1025,7 @@ body {
   right: -3em;
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
     top: -3em;
     right: 50%;
@@ -1098,7 +1066,7 @@ body {
   transform: rotate(45deg);
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle::after {
     top: -6.25em;
     right: calc(50% - 0.465em);
@@ -1110,7 +1078,7 @@ body {
     right: calc(50% - 0.465em);
   }
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
     padding-top: 3em;
   }
@@ -1129,7 +1097,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
     width: 100%;
   }
@@ -1152,7 +1120,7 @@ body {
   background: #ff6913;
   z-index: 1;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::before {
     top: -2.5em;
     left: calc(50% - 0.66em);
@@ -1174,7 +1142,7 @@ body {
   left: -3em;
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
     top: -3em;
     left: calc(50% - 5px);
@@ -1215,7 +1183,7 @@ body {
   transform: rotate(45deg);
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
     top: -6.25em;
     left: calc(50% - 0.765em);
@@ -1248,7 +1216,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .portfolio .title::after {
     left: 83.3%;
   }
@@ -1287,7 +1255,7 @@ body {
   overflow: hidden;
   position: relative;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .portfolio .card li {
     width: 100%;
   }
@@ -1367,7 +1335,7 @@ body {
   border: 3px solid #2f2e2f;
   background: #ff6913;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .contact .title::after {
     left: 82.8%;
   }
@@ -1410,7 +1378,7 @@ body {
   border-radius: 10px;
   background: #252425;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .contact .card li {
     width: 100%;
   }
@@ -1484,7 +1452,7 @@ body {
   justify-content: space-between;
   gap: 2em;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .contact .form-group .wrapper {
     flex-direction: column;
   }
@@ -1497,7 +1465,7 @@ body {
 .container .wrapper-section .contact .form-group .wrapper .input-section {
   width: 50%;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .wrapper-section .contact .form-group .wrapper .input-section {
     width: 100%;
   }
@@ -1574,7 +1542,7 @@ body {
   background: #252425;
   position: relative;
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container .footer {
     padding: 2em 1em;
   }

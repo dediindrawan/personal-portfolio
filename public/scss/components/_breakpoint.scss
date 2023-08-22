@@ -34,7 +34,7 @@ $device-breakpoint: (
 );
 
 @mixin small-smartphone {
-  @media #{map-get($device-breakpoint, small-smartphone)} {
+  @media only screen and #{map-get($device-breakpoint, small-smartphone)} {
     @content;
   }
 }
@@ -52,19 +52,19 @@ $device-breakpoint: (
 }
 
 @mixin tablet {
-  @media #{map-get($device-breakpoint, tablet)} {
+  @media only screen and #{map-get($device-breakpoint, tablet)} {
     @content;
   }
 }
 
 @mixin desktop {
-  @media #{map-get($device-breakpoint, desktop)} {
+  @media only screen and #{map-get($device-breakpoint, desktop)} {
     @content;
   }
 }
 
 @mixin large-desktop {
-  @media #{map-get($device-breakpoint, large-desktop)} {
+  @media only screen and #{map-get($device-breakpoint, large-desktop)} {
     @content;
   }
 }
