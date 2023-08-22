@@ -165,9 +165,9 @@ body {
     background: #1b191b;
   }
 }
-@media only screen and (min-width: 321px) and (orientation: landscape) {
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-navbar {
-    padding: 0 1em;
+    padding: 0;
   }
 }
 .container .wrapper-navbar .brand {
@@ -193,6 +193,11 @@ body {
     padding: 0 2em;
     align-items: center;
     justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-navbar .brand {
+    padding: 0 1em;
   }
 }
 .container .wrapper-navbar .brand a h3 {
@@ -253,6 +258,7 @@ body {
     justify-content: start;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
     background: #1b191b;
   }
 }
@@ -267,11 +273,11 @@ body {
     background: #1b191b;
   }
 }
-@media only screen and (min-width: 321px) and (orientation: landscape) {
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-navbar .nav-link {
     width: 75%;
     max-width: 576px;
-    background-color: crimson;
+    padding: 0 1em;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -345,6 +351,11 @@ body {
     background-position-x: 75%;
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .hero {
+    padding: 0 1em;
+  }
+}
 .container .hero::after {
   content: "";
   position: absolute;
@@ -383,6 +394,11 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero .wrapper .heading {
     padding-top: 12em;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .hero .wrapper .heading {
+    padding-top: 5em;
   }
 }
 .container .hero .wrapper .title {
@@ -458,9 +474,16 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section {
-    width: 576px;
+    max-width: 576px;
     margin: auto;
     padding: 0 2em;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section {
+    max-width: 768px;
+    margin: auto;
+    padding: 0 1em;
   }
 }
 .container .wrapper-section .about {
@@ -481,6 +504,11 @@ body {
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .about .card {
+    flex-direction: column;
+  }
+}
 .container .wrapper-section .about .card .image {
   width: 40%;
   height: 530px;
@@ -496,6 +524,13 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .about .card .image {
+    width: 66%;
+    height: auto;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .about .card .image {
     width: 66%;
     height: auto;
@@ -536,6 +571,11 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .about .card .caption {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
@@ -821,11 +861,13 @@ body {
 }
 .container .wrapper-section .services .card {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2em;
 }
 .container .wrapper-section .services .card li {
-  width: 31.5%;
+  flex: 1;
+  min-width: calc(33.33% - 2em);
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -842,12 +884,18 @@ body {
 }
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .services .card li {
-    width: 100%;
+    min-width: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .services .card li {
-    width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .services .card li {
+    flex: 0;
+    min-width: calc(50% - 2em);
   }
 }
 .container .wrapper-section .services .card li i {
@@ -924,12 +972,22 @@ body {
     padding-top: 2.5em;
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
+    padding-top: -2.5em;
+  }
+}
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
     top: -2.4em;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
+    top: -2.4em;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child .experience:first-child::after {
     top: -2.4em;
   }
@@ -958,6 +1016,13 @@ body {
     z-index: -1;
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:last-child .experience:last-child::after {
+    top: -3em;
+    left: calc(50% - 5px);
+    z-index: -1;
+  }
+}
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
   place-items: start;
 }
@@ -967,6 +1032,11 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
+    padding-top: 3em;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) {
     padding-top: 3em;
   }
@@ -986,6 +1056,11 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience {
     width: 100%;
   }
@@ -1015,6 +1090,12 @@ body {
     right: calc(50% - 0.4em);
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
+    top: -2.5em;
+    right: calc(50% - 0.4em);
+  }
+}
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
   content: "";
   display: block;
@@ -1033,6 +1114,13 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
+    top: -3em;
+    right: 50%;
+    z-index: -1;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
     top: -3em;
     right: 50%;
@@ -1078,12 +1166,23 @@ body {
     right: calc(50% - 0.465em);
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle::after {
+    top: -6.25em;
+    right: calc(50% - 0.465em);
+  }
+}
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
     padding-top: 3em;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
+    padding-top: 3em;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) {
     padding-top: 3em;
   }
@@ -1103,6 +1202,11 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience {
     width: 100%;
   }
@@ -1132,6 +1236,12 @@ body {
     left: calc(50% - 0.66em);
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::before {
+    top: -2.5em;
+    left: calc(50% - 0.66em);
+  }
+}
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
   content: "";
   display: block;
@@ -1154,6 +1264,12 @@ body {
     top: -3em;
     left: calc(50% - 5px);
     z-index: -1;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
+    top: -3em;
+    left: calc(50% - 5px);
   }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .header {
@@ -1190,6 +1306,12 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
+    top: -6.25em;
+    left: calc(50% - 0.765em);
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
     top: -6.25em;
     left: calc(50% - 0.765em);
@@ -1249,7 +1371,8 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .portfolio .card li {
-  width: 31.5%;
+  flex: 1;
+  min-width: calc(33.33% - 2em);
   height: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -1257,12 +1380,18 @@ body {
 }
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .portfolio .card li {
-    width: 100%;
+    min-width: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .portfolio .card li {
-    width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .portfolio .card li {
+    flex: 0;
+    min-width: calc(50% - 2em);
   }
 }
 .container .wrapper-section .portfolio .card li a {
@@ -1368,7 +1497,8 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .contact .card li {
-  width: 31.5%;
+  flex: 1;
+  min-width: calc(33.33% - 2em);
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -1380,12 +1510,20 @@ body {
 }
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .contact .card li {
-    width: 100%;
+    min-width: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .card li {
-    width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .contact .card li {
+    min-width: calc(50% - 2em);
+  }
+  .container .wrapper-section .contact .card li:nth-child(2) {
+    order: 3;
   }
 }
 .container .wrapper-section .contact .card li i {
