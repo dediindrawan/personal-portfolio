@@ -723,10 +723,9 @@
       .card {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         gap: $gap-2;
         li {
-          max-width: calc(33.33% - $gap-2);
+          width: 31.5%;
           padding: $p-2;
           text-align: center;
           font-weight: $ft-light;
@@ -748,16 +747,12 @@
           @include medium-smartphone {
             width: $full;
           }
-          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
-          @include smartphone-landscape {
-            max-width: calc($half - $gap-1);
-          }
           i {
             font-size: $ft-h2;
             color: $warning;
           }
           .subtitle {
-            font-weight: $ft-s-bold;
+            // font-weight: $ft-s-bold;
             text-transform: uppercase;
           }
         }
@@ -768,10 +763,6 @@
     // ========== resume start ========== //
     .resume {
       padding-top: $pt-5;
-      // ========== breakpoint smartphone landscape mode on max width 767px ========== //
-      @include smartphone-landscape {
-        background-color: aqua;
-      }
       // ========== title ========== //
       .title {
         width: max-content;
@@ -928,10 +919,6 @@
                 @include medium-smartphone {
                   top: -2.5em;
                   right: calc($half - 0.4em);
-                }
-                // ========== breakpoint smartphone landscape mode on max width 767px ========== //
-                @include smartphone-landscape {
-                  background: blueviolet;
                 }
               }
               &::after {
@@ -1162,7 +1149,7 @@
         flex-wrap: wrap;
         gap: $gap-2;
         li {
-          max-width: calc(33.33% - $gap-2);
+          width: 31.5%;
           height: auto;
           border-radius: $rd-10;
           overflow: hidden;
@@ -1174,10 +1161,6 @@
           // ========== breakpoint min width on 576px and max width 767px ========== //
           @include medium-smartphone {
             width: $full;
-          }
-          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
-          @include smartphone-landscape {
-            max-width: calc($half - $gap-1);
           }
           a {
             width: $full;
@@ -1288,7 +1271,7 @@
         flex-wrap: wrap;
         gap: $gap-2;
         li {
-          max-width: calc(33.33% - $gap-2);
+          width: 31.5%;
           padding: $p-2;
           text-align: center;
           font-weight: $ft-light;
@@ -1304,14 +1287,6 @@
           // ========== breakpoint min width on 576px and max width 767px ========== //
           @include medium-smartphone {
             width: $full;
-          }
-          // ========== breakpoint smartphone landscape mode on max width 767px ========== //
-          @include smartphone-landscape {
-            flex: 1;
-            max-width: $full;
-            &:nth-child(2) {
-              order: 3;
-            }
           }
           i {
             width: 50px;

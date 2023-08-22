@@ -854,11 +854,10 @@ body {
 .container .wrapper-section .services .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 2em;
 }
 .container .wrapper-section .services .card li {
-  max-width: calc(33.33% - 2em);
+  width: 31.5%;
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -883,26 +882,15 @@ body {
     width: 100%;
   }
 }
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section .services .card li {
-    max-width: calc(50% - 1em);
-  }
-}
 .container .wrapper-section .services .card li i {
   font-size: clamp(1.5rem, 4vw + 1rem, 2.25rem);
   color: #ff6913;
 }
 .container .wrapper-section .services .card li .subtitle {
-  font-weight: 600;
   text-transform: uppercase;
 }
 .container .wrapper-section .resume {
   padding-top: 5em;
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section .resume {
-    background-color: aqua;
-  }
 }
 .container .wrapper-section .resume .title {
   width: max-content;
@@ -1057,11 +1045,6 @@ body {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
     top: -2.5em;
     right: calc(50% - 0.4em);
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::before {
-    background: blueviolet;
   }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience::after {
@@ -1298,7 +1281,7 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .portfolio .card li {
-  max-width: calc(33.33% - 2em);
+  width: 31.5%;
   height: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -1312,11 +1295,6 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .portfolio .card li {
     width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section .portfolio .card li {
-    max-width: calc(50% - 1em);
   }
 }
 .container .wrapper-section .portfolio .card li a {
@@ -1422,7 +1400,7 @@ body {
   gap: 2em;
 }
 .container .wrapper-section .contact .card li {
-  max-width: calc(33.33% - 2em);
+  width: 31.5%;
   padding: 2em;
   text-align: center;
   font-weight: 300;
@@ -1440,15 +1418,6 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .wrapper-section .contact .card li {
     width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .container .wrapper-section .contact .card li {
-    flex: 1;
-    max-width: 100%;
-  }
-  .container .wrapper-section .contact .card li:nth-child(2) {
-    order: 3;
   }
 }
 .container .wrapper-section .contact .card li i {

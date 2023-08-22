@@ -51,9 +51,6 @@ function navbar() {
     window.addEventListener('scroll', () => {
         wrapperNavbar.classList.toggle('sticky-navbar', scrollY > 70);
         wrapperNavbar.style.transition = 'all 0.3s ease-in-out';
-        // if (window.innerWidth < 768) {
-        //     wrapperNavbar.classList.remove('sticky-navbar');
-        // };
     });
 };
 navbar();
