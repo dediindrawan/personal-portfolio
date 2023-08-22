@@ -165,7 +165,7 @@ body {
     background: #1b191b;
   }
 }
-@media only screen and (max-width: 991px) and (orientation: landscape) {
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .container .wrapper-navbar {
     padding: 0 1em;
   }
@@ -267,7 +267,7 @@ body {
     background: #1b191b;
   }
 }
-@media only screen and (max-width: 991px) and (orientation: landscape) {
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .container .wrapper-navbar .nav-link {
     width: 75%;
     max-width: 576px;

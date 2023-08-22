@@ -1,33 +1,7 @@
-// // 640px, 1150px, 1400px
-// $breakpoints-up: (
-//   'medium': '40em',
-//   'large': '71.875em',
-//   'xlarge': '87.5em',
-// );
-
-// // 639px, 1149px, 1399px
-// $breakpoints-down: (
-//   'medium': '39.9375em',
-//   'large': '71.8125em',
-//   'xlarge': '87.4375em',
-// );
-
-// @mixin breakpoint-up($size) {
-//   @media screen and (min-width: map-get($breakpoints-up, $size)) {
-//     @content;
-//   }
-// }
-
-// @mixin breakpoint-down($size) {
-//   @media screen and (max-width: map-get($breakpoints-down, $size)) {
-//     @content;
-//   }
-// }
-
 $device-breakpoint: (
   small-smartphone: '(max-width: 575px)',
   medium-smartphone: '(min-width: 576px) and (max-width: 767px) and (orientation: portrait)',
-  smartphone-landscape: '(max-width: 991px) and (orientation: landscape)',
+  smartphone-landscape: '(min-width: 321px) and (orientation: landscape)',
   tablet: '(min-width: 768px) and (max-width: 991px)',
   desktop: '(min-width: 992px) and (max-width: 1200px)',
   large-desktop: '(min-width: 1201px)',
