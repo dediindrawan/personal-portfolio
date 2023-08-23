@@ -481,8 +481,6 @@ body {
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section {
-    max-width: 768px;
-    margin: auto;
     padding: 0 1em;
   }
 }
@@ -532,7 +530,7 @@ body {
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .about .card .image {
-    width: 66%;
+    width: 46%;
     height: auto;
     margin: auto;
   }
@@ -895,7 +893,7 @@ body {
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .services .card li {
     flex: 0;
-    min-width: calc(50% - 2em);
+    min-width: calc(50% - 1em);
   }
 }
 .container .wrapper-section .services .card li i {
@@ -961,6 +959,7 @@ body {
   width: 100%;
   display: grid;
   place-items: end;
+  position: relative;
 }
 @media only screen and (max-width: 575px) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
@@ -974,7 +973,7 @@ body {
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .resume .wrapper-container .wrapper:first-child:nth-child(odd) {
-    padding-top: -2.5em;
+    padding-top: 2.5em;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -1133,6 +1132,7 @@ body {
   padding-bottom: 1em;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle {
   margin: 1em 0;
@@ -1142,6 +1142,11 @@ body {
   color: #ff6913;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle {
+    font-size: clamp(1rem, 4vw - 1rem, 1rem);
+  }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(odd) .experience .subtitle::after {
   content: "";
@@ -1270,6 +1275,7 @@ body {
   .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience::after {
     top: -3em;
     left: calc(50% - 5px);
+    z-index: -1;
   }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .header {
@@ -1287,6 +1293,11 @@ body {
   color: #ff6913;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle {
+    font-size: clamp(1rem, 4vw - 1rem, 1rem);
+  }
 }
 .container .wrapper-section .resume .wrapper-container .wrapper:nth-child(even) .experience .subtitle::after {
   content: "";
@@ -1391,7 +1402,7 @@ body {
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .portfolio .card li {
     flex: 0;
-    min-width: calc(50% - 2em);
+    min-width: calc(50% - 1em);
   }
 }
 .container .wrapper-section .portfolio .card li a {
