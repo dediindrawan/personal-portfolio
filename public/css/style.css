@@ -296,6 +296,11 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-navbar .nav-link li {
+    padding-left: 0;
+  }
+}
 .container .wrapper-navbar .nav-link li a {
   transition: all 0.3s ease-in-out;
 }

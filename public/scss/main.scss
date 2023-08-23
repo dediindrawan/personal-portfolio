@@ -173,6 +173,10 @@
           padding-left: $pl-2;
           border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
         }
+        // ========== breakpoint landscape mode on max width 991px ========== //
+        @include smartphone-landscape {
+          padding-left: 0;
+        }
         a {
           transition: all $transition;
           &::after {
