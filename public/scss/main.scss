@@ -48,7 +48,7 @@
       border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
       background: $primary;
     }
-    // ========== breakpoint landscape mode on min width 321px ========== //
+    // ========== breakpoint landscape mode on max width 991px ========== //
     @include smartphone-landscape {
       padding: 0;
     }
@@ -75,7 +75,7 @@
         align-items: center;
         justify-content: space-between;
       }
-      // ========== breakpoint landscape mode on min width 321px ========== //
+      // ========== breakpoint landscape mode on max width 991px ========== //
       @include smartphone-landscape {
         padding: $px-1;
       }
@@ -152,7 +152,7 @@
         transition: transform $transition;
         background: $primary;
       }
-      // ========== breakpoint landscape mode on min width 321px ========== //
+      // ========== breakpoint landscape mode on max width 991px ========== //
       @include smartphone-landscape {
         width: 75%;
         max-width: calc(767px - 191px);
@@ -235,7 +235,7 @@
       background-position-y: 70px;
       background-position-x: 75%;
     }
-    // ========== breakpoint landscape mode on min width 321px ========== //
+    // ========== breakpoint landscape mode on max width 991px ========== //
     @include smartphone-landscape {
       padding: $px-1;
     }
@@ -276,7 +276,7 @@
         @include medium-smartphone {
           padding-top: 12em;
         }
-        // ========== breakpoint landscape mode on min width 321px ========== //
+        // ========== breakpoint landscape mode on max width 991px ========== //
         @include smartphone-landscape {
           padding-top: $pt-5;
         }
@@ -355,7 +355,7 @@
       margin: auto;
       padding: $px-2;
     }
-    // ========== breakpoint landscape mode on min width 321px ========== //
+    // ========== breakpoint landscape mode on max width 991px ========== //
     @include smartphone-landscape {
       padding: $px-1;
     }
@@ -375,7 +375,7 @@
         @include medium-smartphone {
           flex-direction: column;
         }
-        // ========== breakpoint landscape mode on min width 321px ========== //
+        // ========== breakpoint landscape mode on max width 991px ========== //
         @include smartphone-landscape {
           flex-direction: column;
         }
@@ -398,7 +398,7 @@
             height: auto;
             margin: auto;
           }
-          // ========== breakpoint landscape mode on min width 321px ========== //
+          // ========== breakpoint landscape mode on max width 991px ========== //
           @include smartphone-landscape {
             width: 46%;
             height: auto;
@@ -441,7 +441,7 @@
           @include medium-smartphone {
             width: $full;
           }
-          // ========== breakpoint landscape mode on min width 321px ========== //
+          // ========== breakpoint landscape mode on max width 991px ========== //
           @include smartphone-landscape {
             width: $full;
           }
@@ -754,7 +754,7 @@
           @include medium-smartphone {
             min-width: $full;
           }
-          // ========== breakpoint landscape mode on min width 321px ========== //
+          // ========== breakpoint landscape mode on max width 991px ========== //
           @include smartphone-landscape {
             flex: 0;
             min-width: calc($half - $gap-1);
@@ -839,7 +839,7 @@
               @include medium-smartphone {
                 padding-top: 2.5em;
               }
-              // ========== breakpoint landscape mode on min width 321px ========== //
+              // ========== breakpoint landscape mode on max width 991px ========== //
               @include smartphone-landscape {
                 padding-top: 2.5em;
               }
@@ -858,7 +858,7 @@
                     top: -2.4em;
                   }
                 }
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   &::after {
                     top: -2.4em;
@@ -891,7 +891,7 @@
                     left: calc($half - 5px);
                     z-index: -1;
                   }
-                  // ========== breakpoint landscape mode on min width 321px ========== //
+                  // ========== breakpoint landscape mode on max width 991px ========== //
                   @include smartphone-landscape {
                     top: -3em;
                     left: calc($half - 5px);
@@ -911,7 +911,7 @@
             @include medium-smartphone {
               padding-top: 3em;
             }
-            // ========== breakpoint landscape mode on min width 321px ========== //
+            // ========== breakpoint landscape mode on max width 991px ========== //
             @include smartphone-landscape {
               padding-top: 3em;
             }
@@ -931,7 +931,7 @@
               @include medium-smartphone {
                 width: $full;
               }
-              // ========== breakpoint landscape mode on min width 321px ========== //
+              // ========== breakpoint landscape mode on max width 991px ========== //
               @include smartphone-landscape {
                 width: $full;
               }
@@ -957,7 +957,7 @@
                   top: -2.5em;
                   right: calc($half - 0.4em);
                 }
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   top: -2.5em;
                   right: calc($half - 0.4em);
@@ -984,7 +984,7 @@
                   right: $half;
                   z-index: -1;
                 }
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   top: -3em;
                   right: $half;
@@ -1007,7 +1007,7 @@
                 color: $warning;
                 border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
                 position: relative;
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   font-size: $ft-p;
                 }
@@ -1031,7 +1031,7 @@
                     top: -6.25em;
                     right: calc($half - 0.465em);
                   }
-                  // ========== breakpoint landscape mode on min width 321px ========== //
+                  // ========== breakpoint landscape mode on max width 991px ========== //
                   @include smartphone-landscape {
                     top: -6.25em;
                     right: calc($half - 0.465em);
@@ -1049,7 +1049,7 @@
             @include medium-smartphone {
               padding-top: 3em;
             }
-            // ========== breakpoint landscape mode on min width 321px ========== //
+            // ========== breakpoint landscape mode on max width 991px ========== //
             @include smartphone-landscape {
               padding-top: 3em;
             }
@@ -1069,7 +1069,7 @@
               @include medium-smartphone {
                 width: $full;
               }
-              // ========== breakpoint landscape mode on min width 321px ========== //
+              // ========== breakpoint landscape mode on max width 991px ========== //
               @include smartphone-landscape {
                 width: $full;
               }
@@ -1095,7 +1095,7 @@
                   top: -2.5em;
                   left: calc($half - 0.66em);
                 }
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   top: -2.5em;
                   left: calc($half - 0.66em);
@@ -1122,7 +1122,7 @@
                   left: calc($half - 5px);
                   z-index: -1;
                 }
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   top: -3em;
                   left: calc($half - 5px);
@@ -1144,7 +1144,7 @@
                 color: $warning;
                 border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
                 position: relative;
-                // ========== breakpoint landscape mode on min width 321px ========== //
+                // ========== breakpoint landscape mode on max width 991px ========== //
                 @include smartphone-landscape {
                   font-size: $ft-p;
                 }
@@ -1168,7 +1168,7 @@
                     top: -6.25em;
                     left: calc($half - 0.765em);
                   }
-                  // ========== breakpoint landscape mode on min width 321px ========== //
+                  // ========== breakpoint landscape mode on max width 991px ========== //
                   @include smartphone-landscape {
                     top: -6.25em;
                     left: calc($half - 0.765em);
@@ -1249,7 +1249,7 @@
           @include medium-smartphone {
             min-width: $full;
           }
-          // ========== breakpoint landscape mode on min width 321px ========== //
+          // ========== breakpoint landscape mode on max width 991px ========== //
           @include smartphone-landscape {
             flex: 0;
             min-width: calc($half - $gap-1);
@@ -1381,7 +1381,7 @@
           @include medium-smartphone {
             min-width: $full;
           }
-          // ========== breakpoint landscape mode on min width 321px ========== //
+          // ========== breakpoint landscape mode on max width 991px ========== //
           @include smartphone-landscape {
             min-width: calc($half - $gap-2);
             &:nth-child(2) {
