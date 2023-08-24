@@ -413,7 +413,7 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero {
-    padding: 0;
+    padding: 0 0;
     background-position-y: 70px;
     background-position-x: 75%;
   }
@@ -425,7 +425,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .hero {
-    padding: 0;
+    padding: 0 0;
     background-position-y: 70px;
     background-position-x: 75%;
   }
@@ -433,7 +433,6 @@ body {
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container .hero {
     padding: 0 3em;
-    background-position-y: 70px;
     background-position-x: 75%;
   }
 }
@@ -775,7 +774,8 @@ body {
   position: relative;
 }
 .container .wrapper-section .about .card .caption .bio li {
-  width: 44.8%;
+  flex: 1;
+  min-width: calc(50% - 2em);
   margin-left: 1em;
   list-style-type: disc;
 }

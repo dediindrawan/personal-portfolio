@@ -290,7 +290,7 @@
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
     @include medium-smartphone {
-      padding: 0;
+      padding: 0 0;
       background-position-y: 70px;
       background-position-x: 75%;
     }
@@ -300,14 +300,13 @@
     }
     // ========== breakpoint min width on 768px and max width 991px ========== //
     @include tablet {
-      padding: 0;
+      padding: 0 0;
       background-position-y: 70px;
       background-position-x: 75%;
     }
     // ========== breakpoint min width on 992px and max width 1200px ========== //
     @include desktop {
       padding: $px-3;
-      background-position-y: 70px;
       background-position-x: 75%;
     }
     &::after {
@@ -626,7 +625,8 @@
             background: $secondary;
             position: relative;
             li {
-              width: 44.8%;
+              flex: 1;
+              min-width: calc($half - $gap-2);
               margin-left: $ml-1;
               list-style-type: disc;
               // ========== breakpoint max width on 575px ========== //
