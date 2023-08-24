@@ -792,6 +792,12 @@ body {
 .container .wrapper-section .about .card .caption .bio li span {
   color: #ffffff;
 }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .wrapper-section .about .card .caption .bio li {
+    flex: 0;
+    min-width: 100%;
+  }
+}
 .container .wrapper-section .about .card .caption .bio .bio-card-icon {
   font-size: 2.5rem;
   position: absolute;

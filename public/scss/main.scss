@@ -640,6 +640,11 @@
               span {
                 color: $default;
               }
+              // ========== breakpoint min width on 992px and max width 1200px ========== //
+              @include desktop {
+                flex: 0;
+                min-width: $full;
+              }
             }
             // ========== card icon ========== //
             .bio-card-icon {
