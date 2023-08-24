@@ -124,6 +124,9 @@ function validateForm() {
         nameErrMessage.style.display = 'block';
         nameErrMessage.innerHTML = 'Name at least have 3 minimum characters';
         result = false;
+    } else if (!isNameValid(nameInput.value.trim())) {
+        nameErrMessage.style.display = 'block';
+        nameErrMessage.innerHTML = 'Name must not contain numbers or symbols';
     } else {
         nameErrMessage.style.display = 'none';
     };
@@ -161,6 +164,12 @@ function validateForm() {
     };
 };
 
+function isNameValid(nameInput) {
+    const reg = /^[A-Za-z\s]+$/;
+
+    return reg.test(nameInput);
+};
+
 // regular expression for validation of email input
 function isEmailValid(emailInput) {
     const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -175,6 +184,10 @@ function sendEmail() {
         email: emailInput.value,
         subject: subjectInput.value,
         message: messageInput.value,
+    };
+
+    if (params.subject == '') {
+        params.subject = 'No subject on this message';
     };
 
     const serviceId = "service_hhanyka";
@@ -192,12 +205,15 @@ function sendEmail() {
             let popupSuccess = document.querySelector('.popup-success');
             popupSuccess.style.display = 'flex';
 
-            // show popup in interval's time
-            setInterval(function () {
-                popupSuccess.textContent = 'Your message sent successfully';
-            }, 2500);
-            setInterval(function () {
-                popupSuccess.style.display = 'none';
-            }, 5000);
+            // show popup in timeout's
+            function showPopup() {
+                setTimeout(function () {
+                    popupSuccess.textContent = 'Your message sent successfully';
+                }, 2500);
+                setTimeout(function () {
+                    popupSuccess.style.display = 'none';
+                }, 5000);
+            };
+            showPopup();
         }).catch(err => console.log(err));
 };
