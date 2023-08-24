@@ -409,14 +409,12 @@ body {
   .container .hero {
     padding: 0 1em;
     background-position-y: 70px;
-    background-position-x: 75%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   .container .hero {
-    padding: 0 0;
+    padding: 0;
     background-position-y: 70px;
-    background-position-x: 75%;
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -426,14 +424,13 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .hero {
-    padding: 0 0;
-    background-position-x: 75%;
+    padding: 0;
+    background-position-y: 70px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container .hero {
     padding: 0 3em;
-    background-position-x: 75%;
   }
 }
 .container .hero::after {
@@ -659,6 +656,7 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container .wrapper-section .about .card .image {
+    min-width: 46%;
     max-width: 66%;
     height: auto;
     margin: auto;

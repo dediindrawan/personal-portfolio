@@ -287,13 +287,11 @@
     @include small-smartphone {
       padding: $px-1;
       background-position-y: 70px;
-      background-position-x: 75%;
     }
     // ========== breakpoint min width on 576px and max width 767px ========== //
     @include medium-smartphone {
-      padding: 0 0;
+      padding: 0;
       background-position-y: 70px;
-      background-position-x: 75%;
     }
     // ========== breakpoint landscape mode on max width 991px ========== //
     @include smartphone-landscape {
@@ -301,13 +299,12 @@
     }
     // ========== breakpoint min width on 768px and max width 991px ========== //
     @include tablet {
-      padding: 0 0;
-      background-position-x: 75%;
+      padding: 0;
+      background-position-y: 70px;
     }
     // ========== breakpoint min width on 992px and max width 1200px ========== //
     @include desktop {
       padding: $px-3;
-      background-position-x: 75%;
     }
     &::after {
       content: '';
@@ -511,6 +508,7 @@
           }
           // ========== breakpoint min width on 992px and max width 1200px ========== //
           @include desktop {
+            min-width: 46%;
             max-width: 66%;
             height: auto;
             margin: auto;
