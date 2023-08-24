@@ -150,11 +150,15 @@ function validateForm() {
 
     // subject input
     let subErrMessage = subjectInput.nextElementSibling;
-    if (subjectInput.value.trim() == '') {
+    if (subjectInput.value == '') {
         subErrMessage.style.display = 'block';
         subErrMessage.innerHTML = 'You didn\'t write any subject, but that\'s okay';
         result = true;
-    } else if (subjectInput.value.trim().length < 3) {
+    } else if (isSubjectSpaces(subjectInput.value)) {
+        subErrMessage.style.display = 'block';
+        subErrMessage.innerHTML = 'Subject must not be just spaces';
+        result = false;
+    } else if (isSubjectSpaces && subjectInput.value.trim().length < 3) {
         subErrMessage.style.display = 'block';
         subErrMessage.innerHTML = 'Subject at least have 3 minimum characters';
         result = false;
@@ -184,7 +188,6 @@ function validateForm() {
         if (subErrMessage.style.display = 'block') {
             subErrMessage.style.display = 'none';
         };
-
         sendEmail();
     };
 };
@@ -210,6 +213,12 @@ function isSubjectValid(subjectInput) {
     return reg.test(subjectInput);
 };
 
+function isSubjectSpaces(subjectInput) {
+    const reg = /^\s*$/;
+
+    return reg.test(subjectInput);
+};
+
 // send email executed
 function sendEmail() {
     let params = {
@@ -219,7 +228,7 @@ function sendEmail() {
         message: messageInput.value,
     };
 
-    if (params.subject == '' && params.subject === ' ') {
+    if (params.subject == '') {
         params.subject = 'No subject on this message';
     };
 
@@ -242,10 +251,10 @@ function sendEmail() {
             function showPopup() {
                 setTimeout(function () {
                     popupSuccess.textContent = 'Your message sent successfully';
-                }, 2500);
+                }, 1500);
                 setTimeout(function () {
                     popupSuccess.style.display = 'none';
-                }, 5000);
+                }, 3000);
             };
             showPopup();
         }).catch(err => console.log(err));
