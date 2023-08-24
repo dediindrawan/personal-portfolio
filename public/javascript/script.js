@@ -181,6 +181,10 @@ function validateForm() {
     };
 
     if (result) {
+        if (subErrMessage.style.display = 'block') {
+            subErrMessage.style.display = 'none';
+        };
+        
         sendEmail();
     };
 };
