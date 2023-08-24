@@ -301,7 +301,6 @@
     // ========== breakpoint min width on 768px and max width 991px ========== //
     @include tablet {
       padding: 0 0;
-      background-position-y: 70px;
       background-position-x: 75%;
     }
     // ========== breakpoint min width on 992px and max width 1200px ========== //
@@ -638,10 +637,6 @@
               }
               span {
                 color: $default;
-              }
-              // ========== breakpoint min width on 992px and max width 1200px ========== //
-              @include desktop {
-                width: $full;
               }
             }
             // ========== card icon ========== //
