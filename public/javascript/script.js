@@ -127,6 +127,7 @@ function validateForm() {
     } else if (!isNameValid(nameInput.value.trim())) {
         nameErrMessage.style.display = 'block';
         nameErrMessage.innerHTML = 'Name must not contain numbers or symbols';
+        result = false;
     } else {
         nameErrMessage.style.display = 'none';
     };
@@ -143,6 +144,24 @@ function validateForm() {
         result = false;
     } else {
         emailErrMessage.style.display = 'none';
+    };
+
+    // subject input
+    let subErrMessage = subjectInput.nextElementSibling;
+    if (subjectInput.value.trim() == '') {
+        subErrMessage.style.display = 'block';
+        subErrMessage.innerHTML = 'You didn\'t write any subject, but that\'s okay';
+        result = true;
+    } else if (subjectInput.value.trim().length < 3) {
+        subErrMessage.style.display = 'block';
+        subErrMessage.innerHTML = 'Subject at least have 3 minimum characters';
+        result = false;
+    } else if (!isSubjectValid(subjectInput.value.trim())) {
+        subErrMessage.style.display = 'block';
+        subErrMessage.innerHTML = 'Subject must not contain numbers or symbols';
+        result = false;
+    } else {
+        subErrMessage.style.display = 'none';
     };
 
     // message input
@@ -164,6 +183,7 @@ function validateForm() {
     };
 };
 
+// regular expression for validation of name input
 function isNameValid(nameInput) {
     const reg = /^[A-Za-z\s]+$/;
 
@@ -177,6 +197,13 @@ function isEmailValid(emailInput) {
     return reg.test(emailInput);
 };
 
+// regular expression for validation of subject input
+function isSubjectValid(subjectInput) {
+    const reg = /^[A-Za-z\s]+$/;
+
+    return reg.test(subjectInput);
+};
+
 // send email executed
 function sendEmail() {
     let params = {
@@ -186,7 +213,7 @@ function sendEmail() {
         message: messageInput.value,
     };
 
-    if (params.subject == '') {
+    if (params.subject == '' || params.subject === ' ') {
         params.subject = 'No subject on this message';
     };
 
