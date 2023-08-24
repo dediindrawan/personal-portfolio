@@ -281,6 +281,7 @@
     background-image: url(../assets/dedi-indrawan-photo.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: 75%;
     position: relative;
     // ========== breakpoint max width on 575px ========== //
     @include small-smartphone {
@@ -473,6 +474,10 @@
         @include tablet {
           flex-direction: column;
         }
+        // ========== breakpoint min width on 992px and max width 1200px ========== //
+        @include desktop {
+          flex-direction: column;
+        }
         // ========== image ========== //
         .image {
           width: 40%;
@@ -501,6 +506,12 @@
           // ========== breakpoint min width on 768px and max width 991px ========== //
           @include tablet {
             width: 66%;
+            height: auto;
+            margin: auto;
+          }
+          // ========== breakpoint min width on 992px and max width 1200px ========== //
+          @include desktop {
+            max-width: 66%;
             height: auto;
             margin: auto;
           }
@@ -547,6 +558,10 @@
           }
           // ========== breakpoint min width on 768px and max width 991px ========== //
           @include tablet {
+            width: $full;
+          }
+          // ========== breakpoint min width on 992px and max width 1200px ========== //
+          @include desktop {
             width: $full;
           }
           // ========== title ========== //

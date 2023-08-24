@@ -402,6 +402,7 @@ body {
   background-image: url(../assets/dedi-indrawan-photo.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: 75%;
   position: relative;
 }
 @media only screen and (max-width: 575px) {
@@ -616,6 +617,11 @@ body {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .wrapper-section .about .card {
+    flex-direction: column;
+  }
+}
 .container .wrapper-section .about .card .image {
   width: 40%;
   height: 530px;
@@ -647,6 +653,13 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .wrapper-section .about .card .image {
     width: 66%;
+    height: auto;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .wrapper-section .about .card .image {
+    max-width: 66%;
     height: auto;
     margin: auto;
   }
@@ -695,6 +708,11 @@ body {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-section .about .card .caption {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
