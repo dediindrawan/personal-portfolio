@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
 });
 
 // set form handling
-const form = document.querySelector('.form-group');
+const form = document.querySelectorAll('.form-group');
 const nameInput = document.querySelector('.name-input');
 const emailInput = document.querySelector('.email-input');
 const subjectInput = document.querySelector('.subject-input');
@@ -95,9 +95,11 @@ const messageInput = document.querySelector('.message-input');
 const popupError = document.querySelector('.popup-error');
 
 // form executed
-form.addEventListener('submit', (e) => {
-    checkingField();
-    e.preventDefault();
+form.forEach(forms => {
+    forms.addEventListener('submit', (e) => {
+        checkingField();
+        e.preventDefault();
+    });
 });
 
 // checking field executed
