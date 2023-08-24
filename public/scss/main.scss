@@ -625,8 +625,7 @@
             background: $secondary;
             position: relative;
             li {
-              flex: 1;
-              min-width: calc($half - $gap-2);
+              width: 44.8%;
               margin-left: $ml-1;
               list-style-type: disc;
               // ========== breakpoint max width on 575px ========== //
@@ -642,8 +641,7 @@
               }
               // ========== breakpoint min width on 992px and max width 1200px ========== //
               @include desktop {
-                flex: 0;
-                min-width: $full;
+                width: $full;
               }
             }
             // ========== card icon ========== //
