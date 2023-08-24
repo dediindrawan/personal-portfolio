@@ -184,7 +184,7 @@ function validateForm() {
         if (subErrMessage.style.display = 'block') {
             subErrMessage.style.display = 'none';
         };
-        
+
         sendEmail();
     };
 };
@@ -219,7 +219,7 @@ function sendEmail() {
         message: messageInput.value,
     };
 
-    if (params.subject == '' || params.subject === ' ') {
+    if (params.subject == '') {
         params.subject = 'No subject on this message';
     };
 
