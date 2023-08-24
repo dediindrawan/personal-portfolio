@@ -219,7 +219,7 @@ function sendEmail() {
         message: messageInput.value,
     };
 
-    if (params.subject == '') {
+    if (params.subject == '' && params.subject === ' ') {
         params.subject = 'No subject on this message';
     };
 
