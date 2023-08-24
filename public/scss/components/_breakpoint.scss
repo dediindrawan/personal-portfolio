@@ -2,9 +2,8 @@ $device-breakpoint: (
   small-smartphone: '(max-width: 575px)',
   medium-smartphone: '(min-width: 576px) and (max-width: 767px) and (orientation: portrait)',
   smartphone-landscape: '(max-width: 991px) and (orientation: landscape)',
-  tablet: '(min-width: 768px) and (max-width: 991px)',
+  tablet: '(min-width: 768px) and (max-width: 991px) and (orientation: portrait)',
   desktop: '(min-width: 992px) and (max-width: 1200px)',
-  large-desktop: '(min-width: 1201px)',
 );
 
 @mixin small-smartphone {
@@ -33,12 +32,6 @@ $device-breakpoint: (
 
 @mixin desktop {
   @media only screen and #{map-get($device-breakpoint, desktop)} {
-    @content;
-  }
-}
-
-@mixin large-desktop {
-  @media only screen and #{map-get($device-breakpoint, large-desktop)} {
     @content;
   }
 }

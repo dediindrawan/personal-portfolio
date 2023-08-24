@@ -113,7 +113,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   background-color: #1b191b;
-  background-image: url(/public/assets/dedi-indrawan-bg-patterns.png);
+  background-image: url(public/assets/dedi-indrawan-bg-patterns.png);
   background-size: contain;
 }
 
@@ -170,6 +170,21 @@ body {
     padding: 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-navbar {
+    padding: 0;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: #1b191b;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .wrapper-navbar {
+    padding: 0 3em;
+  }
+}
 .container .wrapper-navbar .brand {
   display: flex;
   align-items: center;
@@ -198,6 +213,17 @@ body {
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-navbar .brand {
     padding: 0 1em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-navbar .brand {
+    width: 100%;
+    max-width: 768px;
+    min-height: 70px;
+    margin: auto;
+    padding: 0 1em;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .container .wrapper-navbar .brand a h3 {
@@ -244,6 +270,17 @@ body {
     display: none;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-navbar .brand .toggle-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.17rem, 4vw + 1rem, 1.5rem);
+  }
+  .container .wrapper-navbar .brand .toggle-menu .btn-toggle-close {
+    display: none;
+  }
+}
 .container .wrapper-navbar .nav-link {
   width: 50%;
   display: flex;
@@ -280,6 +317,18 @@ body {
     padding: 0 1em;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-navbar .nav-link {
+    width: 70%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    background: #1b191b;
+  }
+}
 @media only screen and (max-width: 575px) {
   .container .wrapper-navbar .nav-link li {
     width: 100%;
@@ -301,6 +350,14 @@ body {
     padding-left: 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-navbar .nav-link li {
+    width: 100%;
+    padding: 1em 0;
+    padding-left: 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
 .container .wrapper-navbar .nav-link li a {
   transition: all 0.3s ease-in-out;
 }
@@ -318,6 +375,11 @@ body {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  .container .wrapper-navbar .nav-link li a::after {
+    width: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .wrapper-navbar .nav-link li a::after {
     width: 0;
   }
@@ -361,6 +423,20 @@ body {
     padding: 0 1em;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .hero {
+    padding: 0;
+    background-position-y: 70px;
+    background-position-x: 75%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .hero {
+    padding: 0 3em;
+    background-position-y: 70px;
+    background-position-x: 75%;
+  }
+}
 .container .hero::after {
   content: "";
   position: absolute;
@@ -388,6 +464,13 @@ body {
     padding: 0 2em;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .hero .wrapper {
+    width: 768px;
+    margin: auto;
+    padding: 0 2em;
+  }
+}
 .container .hero .wrapper .heading {
   padding-bottom: 1em;
 }
@@ -404,6 +487,11 @@ body {
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .hero .wrapper .heading {
     padding-top: 5em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .hero .wrapper .heading {
+    padding-top: 0;
   }
 }
 .container .hero .wrapper .title {
@@ -489,12 +577,25 @@ body {
     padding: 0 1em;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-section {
+    max-width: 768px;
+    margin: auto;
+    padding: 0 1em;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container .wrapper-section {
+    padding: 0 3em;
+  }
+}
 .container .wrapper-section .about {
   padding-top: 5em;
 }
 .container .wrapper-section .about .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 3em;
 }
 @media only screen and (max-width: 575px) {
@@ -508,6 +609,11 @@ body {
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .about .card {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .wrapper-section .about .card {
     flex-direction: column;
   }
@@ -536,6 +642,13 @@ body {
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   .container .wrapper-section .about .card .image {
     width: 46%;
+    height: auto;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-section .about .card .image {
+    width: 66%;
     height: auto;
     margin: auto;
   }
@@ -579,6 +692,11 @@ body {
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .about .card .caption {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .wrapper-section .about .card .caption {
     width: 100%;
   }
@@ -896,6 +1014,12 @@ body {
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .services .card li {
+    flex: 0;
+    min-width: calc(50% - 1em);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .container .wrapper-section .services .card li {
     flex: 0;
     min-width: calc(50% - 1em);
@@ -1410,6 +1534,12 @@ body {
     min-width: calc(50% - 1em);
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-section .portfolio .card li {
+    flex: 0;
+    min-width: calc(50% - 1em);
+  }
+}
 .container .wrapper-section .portfolio .card li a {
   width: 100%;
   height: 100%;
@@ -1535,6 +1665,22 @@ body {
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
+  .container .wrapper-section .contact .card li {
+    min-width: calc(50% - 2em);
+  }
+  .container .wrapper-section .contact .card li:nth-child(2) {
+    order: 3;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container .wrapper-section .contact .card li {
+    min-width: calc(50% - 2em);
+  }
+  .container .wrapper-section .contact .card li:nth-child(2) {
+    order: 3;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container .wrapper-section .contact .card li {
     min-width: calc(50% - 2em);
   }
