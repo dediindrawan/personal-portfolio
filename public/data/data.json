@@ -19,7 +19,7 @@
         },
         {
           "personal_skills": "Leadership",
-          "personal_values": "75%"
+          "personal_values": "70%"
         },
         {
           "personal_skills": "Critical Thinking",
@@ -41,31 +41,31 @@
         },
         {
           "professional_skills": "JavaScript",
-          "professional_values": "50%"
+          "professional_values": "45%"
         },
         {
           "professional_skills": "Node.Js",
-          "professional_values": "15%"
+          "professional_values": "10%"
         },
         {
           "professional_skills": "Express.Js",
-          "professional_values": "15%"
+          "professional_values": "10%"
         },
         {
           "professional_skills": "MySql",
-          "professional_values": "35%"
-        },
-        {
-          "professional_skills": "Vue.Js",
           "professional_values": "20%"
         },
         {
+          "professional_skills": "Vue.Js",
+          "professional_values": "25%"
+        },
+        {
           "professional_skills": "Tailwind",
-          "professional_values": "50%"
+          "professional_values": "40%"
         },
         {
           "professional_skills": "Bootstrap",
-          "professional_values": "50%"
+          "professional_values": "40%"
         }
       ]
     }
@@ -106,7 +106,7 @@
     {
       "header_resume": "2022 - Present",
       "subtitle_resume": "front-end developer & content creator",
-      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+      "description_resume": "Constructing the structure, layout, and functionality of websites using programming languages like HTML, CSS, and JavaScript. Additionally, planning, creating, and generating various types of content such as text, images, videos."
     },
     {
       "header_resume": "2018 - 2020",
@@ -131,7 +131,7 @@
     {
       "header_resume": "2003 - 2006",
       "subtitle_resume": "izzata vocational high school",
-      "description_resume": "create web project and routine post programming content on Instagram and YouTube"
+      "description_resume": "Vocational high school students learn about how automotive machinery construction can function effectively. They also create simple tools like hammers and study how the electrical systems in vehicles can operate."
     }
   ],
   "portfolio": [
@@ -151,18 +151,18 @@
   "content": [
     {
       "url_video_content": "https://www.youtube.com/embed/EcbheLNG3SM?si=HRsFqAFQL27AB_Ma",
-      "subtitle_content": "how to create feature show password in javascript",
-      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+      "subtitle_content": "create feature show password with javaScript",
+      "description_content": "In this video, I share a tutorial on how to create a show password feature that allows displaying a user's password input for viewing and adjustment."
     },
     {
       "url_video_content": "https://www.youtube.com/embed/5P6-Jx9aiSM?si=L75TvRGpMwd0CcdV",
-      "subtitle_content": "how to create feature show password in javascript",
-      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+      "subtitle_content": "create elipsis with line clamp cSS property",
+      "description_content": "In this video, I share a tutorial while also conducting a case study on how the 'line clamp' property in CSS works, so that it can provide an ellipsis effect."
     },
     {
       "url_video_content": "https://www.youtube.com/embed/KcosfJiAq_w?si=dIbUTtdFId67tiWn",
-      "subtitle_content": "how to create feature show password in javascript",
-      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+      "subtitle_content": "create a button click event using javaScript",
+      "description_content": "In this video, I share a tutorial on how we create a click event using several methods in JavaScript and direct it to navigate to a specific page."
     }
   ]
 }

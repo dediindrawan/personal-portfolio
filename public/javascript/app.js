@@ -186,7 +186,7 @@ const getDataObject = () => {
                             <img src="${imagePortfolio[listIndex]}" alt="image">
                             <span class="detail">
                                 <i class="fa-regular fa-image"></i>
-                                <span class="caption">website</span>
+                                <span class="caption">live preview</span>
                             </span>
                         </a>
                     </li>
