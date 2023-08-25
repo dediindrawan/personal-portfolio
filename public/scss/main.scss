@@ -187,7 +187,7 @@
       }
       // ========== breakpoint landscape mode on max width 991px ========== //
       @include smartphone-landscape {
-        width: 75%;
+        width: 88%;
         max-width: calc(767px - 191px);
         padding: $px-1;
       }
@@ -202,6 +202,11 @@
         overflow-y: auto;
         background: $primary;
       }
+      // ========== breakpoint min width on 992px and max width 1200px ========== //
+      @include desktop {
+        width: 55%;
+        max-width: calc(1200px - 208px);
+      }
       li {
         // ========== breakpoint max width on 575px ========== //
         @include small-smartphone {
@@ -209,6 +214,9 @@
           padding: $py-1;
           padding-left: $pl-1;
           border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
+          &:last-child {
+            margin-bottom: $mb-4;
+          }
         }
         // ========== breakpoint min width on 576px and max width 767px ========== //
         @include medium-smartphone {
@@ -1436,6 +1444,108 @@
       }
     }
     // ========== portfolio end ========== //
+
+    // ========== content start ========== //
+    .content {
+      padding-top: $pt-5;
+      // ========== title ========== //
+      .title {
+        width: max-content;
+        margin-bottom: $mb-2;
+        text-transform: uppercase;
+        color: $warning;
+        position: relative;
+        &::after {
+          content: '';
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 34%;
+          left: 57.8%;
+          border-radius: $rd-rounded;
+          border: 3px solid $tertiary;
+          background: $warning;
+          // ========== breakpoint max width on 575px ========== //
+          @include small-smartphone {
+            left: 82%;
+          }
+          // ========== breakpoint min width on 576px and max width 767px ========== //
+          @include medium-smartphone {
+            left: 82%;
+          }
+        }
+        .page {
+          margin-left: 80px;
+          padding-left: 0.25em;
+          font-weight: $ft-x-bold;
+          color: $tertiary;
+          position: relative;
+          &::before {
+            content: '';
+            width: 80px;
+            height: 4px;
+            position: absolute;
+            top: 45%;
+            left: -80px;
+            background: $tertiary;
+          }
+        }
+      }
+      // ========== card ========== //
+      .card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: $gap-2;
+        li {
+          flex: 1;
+          min-width: calc(33.33% - $gap-2);
+          height: auto;
+          padding: $p-2;
+          border-radius: $rd-10;
+          background: $secondary;
+          position: relative;
+          // ========== breakpoint max width on 575px ========== //
+          @include small-smartphone {
+            min-width: $full;
+          }
+          // ========== breakpoint min width on 576px and max width 767px ========== //
+          @include medium-smartphone {
+            min-width: $full;
+          }
+          // ========== breakpoint landscape mode on max width 991px ========== //
+          @include smartphone-landscape {
+            flex: 0;
+            min-width: calc($half - $gap-1);
+          }
+          // ========== breakpoint min width on 768px and max width 991px ========== //
+          @include tablet {
+            flex: 0;
+            min-width: calc($half - $gap-1);
+          }
+          iframe {
+            width: $full;
+            aspect-ratio: 16/9;
+            border-radius: $rd-10;
+            overflow: hidden;
+            background: $secondary;
+          }
+          .subtitle {
+            margin: $my-1;
+            padding-bottom: $pb-1;
+            text-align: center;
+            text-transform: capitalize;
+            color: $warning;
+            border-bottom: 1px solid rgba($color: $default, $alpha: 0.05);
+            position: relative;
+          }
+          .description {
+            text-align: center;
+          }
+        }
+      }
+    }
+    // ========== content end ========== //
 
     // ========== contact start ========== //
     .contact {

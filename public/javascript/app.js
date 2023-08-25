@@ -9,6 +9,7 @@ const about = document.querySelectorAll('.about');
 const services = document.querySelectorAll('.services');
 const resume = document.querySelectorAll('.resume');
 const portfolio = document.querySelectorAll('.portfolio');
+const content = document.querySelectorAll('.content');
 
 // export data and sending to the web page
 const getDataObject = () => {
@@ -188,6 +189,32 @@ const getDataObject = () => {
                                 <span class="caption">website</span>
                             </span>
                         </a>
+                    </li>
+                    `).join('')}
+                    </ul>
+                    `
+            });
+            // ========== dom implementation to video content ========== //
+            let contentObj = getData.content;
+            let urlVideoContent = contentObj.map(dataItems => dataItems.url_video_content);
+            let subtitleContent = contentObj.map(dataItems => dataItems.subtitle_content);
+            let descriptionContent = contentObj.map(dataItems => dataItems.description_content);
+            content.forEach(contents => {
+                contents.innerHTML = '';
+                contents.innerHTML +=
+                    `
+                    <!-- title -->
+                    <h3 class="title">my content <span class="page"><small>06.</small></span></h3>
+                    <!-- card -->
+                    <ul class="card">
+                    ${urlVideoContent.map((content, listIndex) => `
+                    <li>
+                        <iframe src="${content}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h4 class="subtitle">${subtitleContent[listIndex]}</h4>
+                        <div class="description">${descriptionContent[listIndex]}</div>
                     </li>
                     `).join('')}
                     </ul>

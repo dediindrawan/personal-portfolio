@@ -147,5 +147,22 @@
       "url_image_portfolio": "https://dediindrawan.github.io/kalkulator-diskon/",
       "image_portfolio": "https://i.postimg.cc/NLvchpH7/Copy-of-Responsive-Web-Design-1.jpg"
     }
+  ],
+  "content": [
+    {
+      "url_video_content": "https://www.youtube.com/embed/EcbheLNG3SM?si=HRsFqAFQL27AB_Ma",
+      "subtitle_content": "how to create feature show password in javascript",
+      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+    },
+    {
+      "url_video_content": "https://www.youtube.com/embed/5P6-Jx9aiSM?si=L75TvRGpMwd0CcdV",
+      "subtitle_content": "how to create feature show password in javascript",
+      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+    },
+    {
+      "url_video_content": "https://www.youtube.com/embed/KcosfJiAq_w?si=dIbUTtdFId67tiWn",
+      "subtitle_content": "how to create feature show password in javascript",
+      "description_content": "In this video i will explanation the tutorial how the javascript can make show and hide password by user input"
+    }
   ]
 }
