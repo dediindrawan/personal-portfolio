@@ -1669,7 +1669,7 @@ body {
   flex: 1;
   min-width: calc(33.33% - 2em);
   height: auto;
-  padding: 2em;
+  padding: 1em;
   border-radius: 10px;
   background: #252425;
   position: relative;
