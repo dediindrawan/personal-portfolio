@@ -5,6 +5,8 @@ The website showcases various content describing personal profile, hard and soft
 
 ![Screenshot (498)](https://github.com/dediindrawan/personal-portfolio/assets/107289320/23b4ce98-95bb-475e-8d2c-8ee30c6e7210)
 
+Visit this link to try out the demonstration https://dediindrawan.github.io/personal-portfolio/
+
 Each page also includes several basic meta data tags for additional settings such as SEO, Open Graph, and search engine indexing.
 
 For example: 
@@ -27,7 +29,5 @@ For example:
         content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
     <meta property="og:image" content="https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg">
     <meta property="og:url" content="https://dediindrawan.github.io/dedi-indrawan-portfolio">
-
-Visit this link to try out the demonstration https://dediindrawan.github.io/personal-portfolio/
 
 Also connected with me on my Instagram @dediindra_one https://www.instagram.com/dediindra_one/
