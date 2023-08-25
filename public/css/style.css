@@ -1701,7 +1701,6 @@ body {
   aspect-ratio: 16/9;
   border-radius: 10px;
   overflow: hidden;
-  background: #252425;
 }
 .container .wrapper-section .content .card li .subtitle {
   margin: 1em 0;
