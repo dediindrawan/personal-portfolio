@@ -117,8 +117,45 @@ body {
   background-size: contain;
 }
 
+.loading-container {
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading-container .ball {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #1b191b 5%, #ff6913);
+  animation: bounce 1s linear infinite;
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.loading-container .shadow {
+  width: 50px;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  background: #252425;
+  animation: scale 1s linear infinite;
+}
+@keyframes scale {
+  50% {
+    transform: scale(0);
+  }
+}
+
 .container {
   width: 100%;
+  display: none;
   position: relative;
 }
 .container .wrapper-navbar {

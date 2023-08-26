@@ -4,6 +4,21 @@
 // import data from local database
 const data = 'public/data/data.json';
 
+// create loading content execution
+const loadingContainer = document.querySelectorAll('.loading-container');
+const contentContainer = document.querySelectorAll('.container');
+
+// hide loading when content showed successfully
+function hideLoadingShowContent() {
+    loadingContainer.forEach(loading => {
+        loading.style.display = 'none';
+    });
+
+    contentContainer.forEach(container => {
+        container.style.display = 'block';
+    });
+};
+
 // create variable to dom execution
 const about = document.querySelectorAll('.about');
 const services = document.querySelectorAll('.services');
@@ -220,8 +235,10 @@ const getDataObject = () => {
                     </ul>
                     `
             });
+            hideLoadingShowContent();
         }).catch(err => {
             console.log('Oops, sorry!! We\'re looks like having trouble to load data. Detail error => ' + err);
+            hideLoadingShowContent();
         });
 };
 document.addEventListener('DOMContentLoaded', getDataObject);

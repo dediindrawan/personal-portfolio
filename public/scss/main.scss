@@ -1,8 +1,44 @@
 @use './global/index' as *;
 
+.loading-container {
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .ball {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: $rd-rounded;
+    background: $gradient-warning;
+    animation: bounce 1s linear infinite;
+    @keyframes bounce {
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  }
+  .shadow {
+    width: 50px;
+    height: 5px;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: $rd-rounded;
+    background: $secondary;
+    animation: scale 1s linear infinite;
+    @keyframes scale {
+      50% {
+        transform: scale(0);
+      }
+    }
+  }
+}
 // ========== container start ========== //
 .container {
   width: $full;
+  display: none;
   position: relative;
   // ========== wrapper navbar start ========== //
   .wrapper-navbar {
