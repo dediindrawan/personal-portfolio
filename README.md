@@ -40,6 +40,6 @@ For example:
     <meta property="og:description"
         content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
     <meta property="og:image" content="https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg">
-    <meta property="og:url" content="https://dediindrawan.github.io/dedi-indrawan-portfolio">
+    <meta property="og:url" content="https://dediindrawan.github.io/personal-portfolio">
 
 Also connected with me on my Instagram @dediindra_one https://www.instagram.com/dediindra_one/
