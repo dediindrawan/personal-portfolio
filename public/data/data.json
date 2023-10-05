@@ -1,7 +1,7 @@
 {
   "about": [
     {
-      "image_about": "https://i.postimg.cc/T38wGc6s/IMG-20230730-230028.png",
+      "image_about": "public/assets/dedi-indrawan-about.png",
       "subtitle_about": "I am a Front-End Developer with one year of experience as a freelancer. Additionally, I am a programming content creator on Instagram & YouTube under the username 'Dedi Indrawan'.",
       "description_about": "Someone who is proactive, easily adapts to changing situations, and possesses good communication skills. Understands the individual's role in achieving common goals and is accustomed to conducting thorough evaluation and analysis. Enjoys challenges that can enhance my abilities and experiences in achieving personal as well as company goals.",
       "bio_name": "dedi indrawan",
@@ -137,15 +137,15 @@
   "portfolio": [
     {
       "url_image_portfolio": "https://dediindrawan.github.io/coffeeshop-web-design/",
-      "image_portfolio": "https://i.postimg.cc/8CpTPKnZ/Copy-of-Responsive-Web-Design.jpg"
+      "image_portfolio": "public/assets/dedi-indrawan-portfolio-1.jpg"
     },
     {
       "url_image_portfolio": "https://dediindrawan.github.io/todo-app/",
-      "image_portfolio": "https://i.postimg.cc/xd6nkvwn/Copy-of-Copy-of-Responsive-Web-Design.jpg"
+      "image_portfolio": "public/assets/dedi-indrawan-portfolio-2.jpg"
     },
     {
       "url_image_portfolio": "https://dediindrawan.github.io/kalkulator-diskon/",
-      "image_portfolio": "https://i.postimg.cc/NLvchpH7/Copy-of-Responsive-Web-Design-1.jpg"
+      "image_portfolio": "public/assets/dedi-indrawan-portfolio-3.jpg"
     }
   ],
   "content": [
