@@ -70,7 +70,7 @@ const getDataObject = () => {
                             <!-- bio -->
                             <ul class="bio">
                                 <li>name: <span>${aboutObj.bio_name}</span></li>
-                                <li>age: <span>${aboutObj.bio_age}</span></li>
+                                <li>age: <span>${(countAge())}</span></li>
                                 <li>phone: <span>${aboutObj.bio_phone}</span></li>
                                 <li>address: <span>${aboutObj.bio_address}</span></li>
                                 <!-- card icon -->

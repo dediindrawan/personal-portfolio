@@ -60,31 +60,19 @@ function btnHero() {
     window.location.href = "contact.html";
 };
 
-// set copyright year to automatically updated
-function displayCopyrightYear() {
-    let year = document.querySelectorAll('.year'),
-        thisYear = new Date(), years;
-    years = thisYear.getFullYear();
+// set age to automatically updated
+function countAge() {
+    const birthDate = new Date(1988, 11, 8); // assign date format (yy:mm:dd)
 
-    year.forEach(copyYear => {
-        copyYear.textContent = `${years}`;
-    });
-};
-displayCopyrightYear();
+    const now = new Date();
+    let age = now.getFullYear() - birthDate.getFullYear();
 
-// set btn back to top
-const btnBackToTop = document.querySelector('.btn-back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        btnBackToTop.style.display = 'flex';
-        btnBackToTop.addEventListener('click', () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-    } else {
-        btnBackToTop.style.display = 'none';
+    if (now.getMonth() < birthDate.getMonth() || (now.getMonth() === birthDate.getMonth() && now.getDate() < birthDate.getDate())) {
+        age--;
     };
-});
+
+    return age;
+};
 
 // set form handling
 const form = document.querySelectorAll('.form-group');
@@ -259,3 +247,29 @@ function sendEmail() {
             showPopup();
         }).catch(err => console.log(err));
 };
+
+// set btn back to top
+const btnBackToTop = document.querySelector('.btn-back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        btnBackToTop.style.display = 'flex';
+        btnBackToTop.addEventListener('click', () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    } else {
+        btnBackToTop.style.display = 'none';
+    };
+});
+
+// set copyright year to automatically updated
+function displayCopyrightYear() {
+    let year = document.querySelectorAll('.year'),
+        thisYear = new Date(), years;
+    years = thisYear.getFullYear();
+
+    year.forEach(copyYear => {
+        copyYear.textContent = `${years}`;
+    });
+};
+displayCopyrightYear();
