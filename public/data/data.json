@@ -3,7 +3,7 @@
     {
       "image_about": "public/assets/dedi-indrawan-about.png",
       "subtitle_about": "I am a Front-End Developer with one year of experience as a freelancer. Additionally, I am a programming content creator on Instagram & YouTube under the username 'Dedi Indrawan'.",
-      "description_about": "Someone who is proactive, easily adapts to changing situations, and possesses good communication skills. Understands the individual's role in achieving common goals and is accustomed to conducting thorough evaluation and analysis. Enjoys challenges that can enhance my abilities and experiences in achieving personal as well as company goals.",
+      "description_about": "I am a passionate professional with experience as an Dispatcher Hotel at the respectable company in Indonesia. Organizational skills, time management, and customer service is my main skill. Currently, I am switching to the world of web development as a Front-End Developer. Although without direct experience, I bring a strong spirit for learning and have gained a solid understanding of web programming fundamentals such as HTML, CSS, and JavaScript. My desire to continue learning and strong interpersonal skills make me confident I can succeed in this new career path. I believe that courage to change and determination to keep growing are the keys to success.",
       "bio_name": "dedi indrawan",
       "bio_phone": "+62 897-4523-500",
       "bio_address": "bogor, indonesia",
@@ -36,35 +36,23 @@
         },
         {
           "professional_skills": "Sass",
-          "professional_values": "70%"
+          "professional_values": "50%"
         },
         {
           "professional_skills": "JavaScript",
           "professional_values": "45%"
         },
         {
-          "professional_skills": "Node.Js",
+          "professional_skills": "Vite",
           "professional_values": "10%"
         },
         {
-          "professional_skills": "Express.Js",
-          "professional_values": "10%"
-        },
-        {
-          "professional_skills": "MySql",
-          "professional_values": "20%"
-        },
-        {
-          "professional_skills": "Vue.Js",
-          "professional_values": "25%"
-        },
-        {
-          "professional_skills": "Tailwind",
-          "professional_values": "40%"
+          "professional_skills": "TailwindCSS",
+          "professional_values": "70%"
         },
         {
           "professional_skills": "Bootstrap",
-          "professional_values": "40%"
+          "professional_values": "50%"
         }
       ]
     }
@@ -139,11 +127,11 @@
       "image_portfolio": "public/assets/dedi-indrawan-portfolio-1.jpg"
     },
     {
-      "url_image_portfolio": "https://dediindrawan.github.io/todo-app/",
+      "url_image_portfolio": "https://dediindrawan.github.io/personal-portfolio/",
       "image_portfolio": "public/assets/dedi-indrawan-portfolio-2.jpg"
     },
     {
-      "url_image_portfolio": "https://dediindrawan.github.io/kalkulator-diskon/",
+      "url_image_portfolio": "https://task-manager-apps.vercel.app/index.html",
       "image_portfolio": "public/assets/dedi-indrawan-portfolio-3.jpg"
     }
   ],
