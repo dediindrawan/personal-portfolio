@@ -43,6 +43,10 @@
           "professional_values": "45%"
         },
         {
+          "professional_skills": "Git",
+          "professional_values": "65%"
+        },
+        {
           "professional_skills": "Vite",
           "professional_values": "10%"
         },
