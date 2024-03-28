@@ -137,6 +137,10 @@
     {
       "url_image_portfolio": "https://task-manager-apps.vercel.app/index.html",
       "image_portfolio": "public/assets/dedi-indrawan-portfolio-3.jpg"
+    },
+    {
+      "url_image_portfolio": "https://papanots-steak.vercel.app/",
+      "image_portfolio": "public/assets/dedi-indrawan-portfolio-4.jpg"
     }
   ],
   "content": [

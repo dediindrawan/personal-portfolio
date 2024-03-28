@@ -1572,6 +1572,7 @@ body {
 }
 .container .wrapper-section .portfolio .card li {
   flex: 1;
+  flex-grow: 0;
   min-width: calc(33.33% - 2em);
   height: auto;
   border-radius: 10px;

@@ -1,16 +1,16 @@
 // change image on user platform using basically
 function setSharedImage() {
-    let sharedImage = 'https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg';
+    let sharedImage = 'https://i.ibb.co/qC9f1gp/dedi-indrawan-title.jpg';
 
     // set user popular platform are needed
     if (window.location.href.includes('whatsapp.com')) {
-        sharedImage = 'https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg';
+        sharedImage = 'https://i.ibb.co/qC9f1gp/dedi-indrawan-title.jpg';
     } else if (window.location.href.includes('instagram.com')) {
-        sharedImage = 'https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg';
+        sharedImage = 'https://i.ibb.co/qC9f1gp/dedi-indrawan-title.jpg';
     } else if (window.location.href.includes('telegram.com')) {
-        sharedImage = 'https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg';
+        sharedImage = 'https://i.ibb.co/qC9f1gp/dedi-indrawan-title.jpg';
     } else if (window.location.href.includes('twitter.com')) {
-        sharedImage = 'https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg';
+        sharedImage = 'https://i.ibb.co/qC9f1gp/dedi-indrawan-title.jpg';
     };
 
     // set display picture when link is shared by user

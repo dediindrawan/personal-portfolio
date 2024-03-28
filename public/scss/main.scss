@@ -1402,6 +1402,7 @@
         gap: $gap-2;
         li {
           flex: 1;
+          flex-grow: 0;
           min-width: calc(33.33% - $gap-2);
           height: auto;
           border-radius: $rd-10;
